@@ -6,6 +6,6 @@ OGRE 3D
 
 1. Hierachical Structure
 
-2.ollsision Decetection
+2. Collsision Decetection
 
 ### Visual Studio 2010
