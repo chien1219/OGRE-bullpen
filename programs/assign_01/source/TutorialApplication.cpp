@@ -25,7 +25,7 @@ using namespace Ogre;
 
 const float PI = 3.141592654;
 float time_step = 0;
-int pengiunState = 0; // 0 down  1 up
+int ballState = 0; // 0 stop 1 up 2 down 3 left 4 right
 bool zero_flag = false;
 
 BasicTutorial_00::BasicTutorial_00(void) {}
@@ -34,8 +34,6 @@ void BasicTutorial_00::chooseSceneManager()
 {
 	mSceneMgrArr[0] = mRoot
 		->createSceneManager(ST_GENERIC, "primary");
-	mSceneMgrArr[1] = mRoot
-		->createSceneManager(ST_GENERIC, "secondary");
 }
 
 void BasicTutorial_00::createCamera_00(void)
@@ -50,12 +48,6 @@ void BasicTutorial_00::createCamera_00(void)
 
 void BasicTutorial_00::createCamera_01(void)
 {
-	// add your own stuff
-	mSceneMgr = mSceneMgrArr[1];
-	mCamera = mCameraArr[1] = mSceneMgr->createCamera("SceneTwoCam");
-	mCamera->setPosition(Ogre::Vector3(0, 350, 0.001));
-	mCamera->lookAt(Ogre::Vector3(0, 0, 0));
-	mCamera->setNearClipDistance(5);
 }
 
 
@@ -72,15 +64,6 @@ void BasicTutorial_00::createViewport_00(void)
 
 void BasicTutorial_00::createViewport_01(void)
 {
-    // add your own stuff
-	mCamera = mCameraArr[1];
-	Ogre::Viewport* vp = mWindow->addViewport(mCamera,1,0.75,0,0.25,0.25);
-	vp->setOverlaysEnabled(false);
-	vp->setBackgroundColour(Ogre::ColourValue(0,0.0,1.0));
-	mCamera->setAspectRatio(
-		Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
-
-    mViewportArr[1] = vp;
 }
 
 void BasicTutorial_00::createScene_00(void) 
@@ -119,12 +102,9 @@ void BasicTutorial_00::createScene_00(void)
 
 	mSceneMgr->setAmbientLight(ColourValue(0.5,0.5,0.5));
 	mSceneMgr->setShadowTechnique(SHADOWTYPE_STENCIL_ADDITIVE);
-	Entity* entPenguin1 = mSceneMgr->createEntity("Pengiun1","penguin.mesh");
-	Entity* entPenguin2 = mSceneMgr->createEntity("Pengiun2","penguin.mesh");
-	
-	Entity* cube1 = mSceneMgr->createEntity("Cube1","cube.mesh");
-	Entity* cube2 = mSceneMgr->createEntity("Cube2","cube.mesh");
-	Entity* fish = mSceneMgr->createEntity("Fish","fish.mesh");
+	Entity* entBigBall = mSceneMgr->createEntity("BigBall","sphere.mesh");
+	Entity* entball1 = mSceneMgr->createEntity("ball1","sphere.mesh");
+	Entity* entball2 = mSceneMgr->createEntity("ball2","sphere.mesh");
 
 	Entity* entPlane1 = mSceneMgr->createEntity("Ground","ground");
 	Entity* entPlane2 = mSceneMgr->createEntity("Wall", "wall");
@@ -137,47 +117,35 @@ void BasicTutorial_00::createScene_00(void)
 
 	SceneNode *node1 = mSceneMgr
 		->getRootSceneNode()
-		->createChildSceneNode(
-			"PengiunNode",
-            Vector3(100.0, 50.0, 100.0));
+		->createChildSceneNode();
 
 	SceneNode *node2 = mSceneMgr
 		->getRootSceneNode()
 		->createChildSceneNode(
-            Vector3(150.0, 20.0, 0.0));
+		"BigBall");
 
 	 SceneNode *node3 = mSceneMgr
 		->getRootSceneNode()
-		->createChildSceneNode();
+		->createChildSceneNode(
+		"b1",
+		Vector3(150, 0.0, 0.0));
 
 	 SceneNode *node4 = mSceneMgr
 		->getRootSceneNode()
-		->createChildSceneNode("CubeNode");
-
-	 SceneNode *node5 = node4
-		->createChildSceneNode();
+		->createChildSceneNode( 
+		"b2",
+		Vector3(-150, 0.0, 0.0));
 	 
-	 SceneNode *node6 = node5
-		->createChildSceneNode();
-	 
-
-	 node5 -> translate(Vector3(0,50,0));
-	 node5->scale(Vector3(0.5,0.5,0.5));
-	 node6->scale(Vector3(5,5,5));
-	 
-	 node6 -> translate(Vector3(0,100,0));
-
-	 node4->attachObject(cube1);
-	 node5->attachObject(cube2);
-	 node6->attachObject(fish);
-
-	node1 -> scale(2,3,2);
-	node2 -> yaw(Degree(-90));
-	node3 -> setPosition(0,0,-750);
+	node1 -> setPosition(0,0,-750);
 	node0 -> attachObject(entPlane1);
-	node1 -> attachObject(entPenguin1);
-	node3 -> attachObject(entPlane2);
-	node2 -> attachObject(entPenguin2);
+	node1 -> attachObject(entPlane2);
+
+	node3->scale(0.1,0.1,0.1);
+	node4->scale(0.1,0.1,0.1);
+
+	node2->attachObject(entBigBall);
+	node3->attachObject(entball1);
+	node4->attachObject(entball2);
 
     Light *light = mSceneMgr -> createLight("Light1");
 	light->setType(Light::LT_POINT);
@@ -194,45 +162,6 @@ void BasicTutorial_00::createScene_00(void)
 
 void BasicTutorial_00::createScene_01(void) 
 {
-    // add your own stuff
-	mSceneMgr = mSceneMgrArr[1];
-	mSceneMgr->setAmbientLight(ColourValue(0,0,0));
-	mSceneMgr->setShadowTechnique(SHADOWTYPE_STENCIL_ADDITIVE);
-
-	Light *light = mSceneMgr -> createLight("Light3");
-	light->setType(Light::LT_POINT);
-	light->setPosition(Vector3(100, 150, 250));
-	light->setDiffuseColour(0.0, 0.0, 1.0); //blue
-	light->setSpecularColour(0.0,0.0, 1.0); //blue
-
-	Plane plane(Vector3::UNIT_Y, 0);
-	MeshManager::getSingleton().createPlane(
-		"plane",
-		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
-		plane,
-		1500,1500, // width, height
-		20,20, // x- and y-segments
-		true, // normal
-		1, // num texture sets
-		5,5, // x- and y-tiles
-		Vector3::UNIT_Z // upward vector
-	); 
-	Entity* entPlane = mSceneMgr->createEntity("Plane","plane");
-	Entity* ent = mSceneMgr->createEntity("Cube","cube.mesh");
-	ent->setMaterialName("Examples/green");
-
-	SceneNode *node = mSceneMgr
-		->getRootSceneNode()
-		->createChildSceneNode();
-
-	SceneNode *node1 = mSceneMgr
-		->getRootSceneNode()
-		->createChildSceneNode(
-            Vector3(50.0, 0.0, 0.0));
-
-	node1 -> scale(0.5,0.5,0.5);
-	node -> attachObject(entPlane);
-	node1 -> attachObject(ent);
 }
 
 void BasicTutorial_00::createViewports(void)
@@ -342,71 +271,36 @@ bool BasicTutorial_00::keyPressed( const OIS::KeyEvent &arg )
             ->setPosition(Vector3(19.94,	822.63,	30.79));
         mCameraMan->getCamera()
             ->setDirection(Vector3(0.00,	-0.99,	-0.11));
-    }
-
-    if (arg.key == OIS::KC_M ) {
-        
-       Camera *cam1 = mCameraArr[0];
-	   Camera *cam2 = mCameraArr[1];
-
-       mWindow->removeViewport(mViewportArr[0]->getZOrder());
-	   mWindow->removeViewport(mViewportArr[1]->getZOrder());
-	Ogre::Viewport* vp = mWindow->addViewport(cam2);
-	vp->setOverlaysEnabled(false);
-	vp->setBackgroundColour(Ogre::ColourValue(0,0.0,1.0));
-	cam2->setAspectRatio(
-		Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
-    mViewportArr[1] = vp;
-
-	vp = mWindow->addViewport(
-		cam1,
-		1,
-		0,
-		0,
-		0.5,
-		0.2);
-	vp->setBackgroundColour(Ogre::ColourValue(0,0.5,0.0));
-	cam1->setAspectRatio(
-		Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
-	    mViewportArr[0] = vp;          
-    }
-
-    if (arg.key == OIS::KC_N ) {
-        // add your own stuff
-	   Camera *cam1 = mCameraArr[0];
-	   Camera *cam2 = mCameraArr[1];
-
-       mWindow->removeViewport(mViewportArr[0]->getZOrder());
-	   mWindow->removeViewport(mViewportArr[1]->getZOrder());
-	Ogre::Viewport* vp = mWindow->addViewport(cam2,
-		1,
-		0.5,
-		0.3,
-		0.5,
-		0.2);
-	vp->setOverlaysEnabled(false);
-	vp->setBackgroundColour(Ogre::ColourValue(0,0.0,1.0));
-	cam2->setAspectRatio(
-		Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
-    mViewportArr[1] = vp;    
-
-	vp = mWindow->addViewport(cam1);
-	vp->setBackgroundColour(Ogre::ColourValue(1.0,0.0,0.0));
-	cam1->setAspectRatio(
-		Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
-	mViewportArr[0] = vp;     
-    }
-
-	if (arg.key == OIS::KC_0 ) {
-		switch(zero_flag){
-			case true:
-				zero_flag = false;
-				break;
-			case false:
-				zero_flag = true;
-				break;
-		}
 	}
+
+	if (arg.key == OIS::KC_I ) {
+		if (ballState == 1)
+			ballState = 0;
+		else
+		ballState = 1;
+	}
+
+	if (arg.key == OIS::KC_K ) {
+		if (ballState == 2)
+			ballState = 0;
+		else
+		ballState = 2;
+	}
+	
+	if (arg.key == OIS::KC_J ) {
+		if (ballState == 3)
+			ballState = 0;
+		else
+		ballState = 3;
+	}
+
+	if (arg.key == OIS::KC_L ) {
+		if (ballState == 4)
+			ballState = 0;
+		else
+		ballState = 4;
+	}
+
 
     // Do not delete this line
     BaseApplication::keyPressed(arg);
@@ -435,56 +329,76 @@ bool BasicTutorial_00::frameStarted(const Ogre::FrameEvent& evt)
 {
 	bool flg = Ogre::FrameListener::frameStarted(evt);
     // add your own stuff
-	if (zero_flag){
+
 		mSceneMgr = mSceneMgrArr[0];
-		Entity* pengiun = mSceneMgr->getEntity("Pengiun1");
 		SceneNode *node1 = mSceneMgr
-			->getSceneNode("PengiunNode");
-
-		SceneNode *node2 = mSceneMgr
-			->getSceneNode("CubeNode");
-
-		node2->yaw(Degree(0.1));
+			->getSceneNode("BigBall");
 
 		Vector3 position = node1->getPosition();
 
-		if (!pengiunState){
-			position = move_down(position, time_step);
-			if (position.y < 0){
-				time_step = 0;
-				pengiunState = 1;
-			}
+		if (ballState == 1){
+			node1->setPosition(move_up(position));
+			checkCollision(position);
+		}
+		else if (ballState == 2){
+			node1->setPosition(move_down(position));
+			checkCollision(position);
+		}
+		else if (ballState == 3){
+			node1->setPosition(move_left(position));
+			checkCollision(position);
+		}
+		else if (ballState == 4){
+			node1->setPosition(move_right(position));
+			checkCollision(position);
 		}
 
-		else if (pengiunState){
-			position = move_up(position, time_step);
-			if (position.y > 280){
-				time_step = 0;
-				pengiunState = 0;
-			}
-		}
-
-		node1->setPosition(position);
-		time_step += 0.002;
-	}
     return flg;
 }
+void BasicTutorial_00::checkCollision(Vector3 pos){
 
-Vector3 BasicTutorial_00::move_down(Vector3 pos, float time_step){
-	Vector3 velocity = Vector3(0.0,0.0,0.0);
-	Vector3 acceleration = Vector3(0.0, -50.8, 0.0);
-	
-	velocity += acceleration*time_step;
-	return pos + velocity*time_step;
+	mSceneMgr = mSceneMgrArr[0];
+	SceneNode *node1 = mSceneMgr
+			->getSceneNode("b1");
+	SceneNode *node2 = mSceneMgr
+			->getSceneNode("b2");
+
+	Vector3 dir1 = node1->getPosition() - pos;
+	Vector3 dir2 = node2->getPosition() - pos;
+
+	if (dir1.length() <= 110)
+	{
+		node1->setPosition(node1->getPosition() + dir1.normalisedCopy());
+	}
+	if (dir2.length() <= 110)
+	{
+		node2->setPosition(node2->getPosition() + dir2.normalisedCopy());
+	}
+
 }
 
-Vector3 BasicTutorial_00::move_up(Vector3 pos, float time_step){
-	Vector3 velocity = Vector3(0,0,0);
-	Vector3 acceleration = Vector3(0.0, 20.8, 0.0);
+Vector3 BasicTutorial_00::move_down(Vector3 pos){
+	Vector3 velocity = Vector3(0,0,1);
 	
-	if (velocity.y <= 80)
-	velocity += acceleration*time_step;
-	return pos + velocity*time_step;
+	return pos + velocity;
+}
+
+Vector3 BasicTutorial_00::move_up(Vector3 pos){
+	Vector3 velocity = Vector3(0,0,-1);
+	
+	return pos + velocity;
+}
+
+Vector3 BasicTutorial_00::move_left(Vector3 pos){
+	Vector3 velocity = Vector3(-1,0,0);
+	
+	return pos + velocity;
+}
+
+Vector3 BasicTutorial_00::move_right(Vector3 pos){
+	Vector3 velocity = Vector3(1,0,0);
+	
+	return pos + velocity;
 }
 
 int main(int argc, char *argv[]) {

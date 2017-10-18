@@ -44,15 +44,17 @@ public:
 	
 	which calculates the new position when pengiun move down.
 	*/
-	virtual Vector3 move_down(Vector3, float);
+	virtual Vector3 move_down(Vector3);
 	/*!
 	\brief this function is for the key:0 animation
 	
 	which calculates the new position when pengiun move up.
 	*/
-	virtual Vector3 move_up(Vector3, float);
-
+	virtual Vector3 move_up(Vector3);
+	virtual Vector3 move_left(Vector3);
+	virtual Vector3 move_right(Vector3);
 protected:
+	void checkCollision(Vector3);
 	/*!
 	\brief Set the viewport with camera[0]
 	
