@@ -1,0 +1,808 @@
+\hypertarget{class_basic_tutorial__00}{}\section{Basic\+Tutorial\+\_\+00 Class Reference}
+\label{class_basic_tutorial__00}\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+
+
+3D Game Programming ~\newline
+My Name\+: Li-\/\+Che Chien ~\newline
+My ID\+: 0316235 ~\newline
+My Email\+: \href{mailto:richard@hotmail.com}{\tt richard@hotmail.\+com}  
+
+
+
+
+{\ttfamily \#include $<$Tutorial\+Application.\+h$>$}
+
+Inheritance diagram for Basic\+Tutorial\+\_\+00\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.382979cm]{class_basic_tutorial__00}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_basic_tutorial__00_a6b55068822076b28e7819b1878e95684}{Basic\+Tutorial\+\_\+00} (void)
+\item 
+virtual void \hyperlink{class_basic_tutorial__00_adc2454d9f8226e0958ecf702f355846e}{create\+Viewports} (void)
+\item 
+virtual void \hyperlink{class_basic_tutorial__00_a15a3d4673724ec99077ce992f996a550}{create\+Scene} (void)
+\item 
+virtual void \hyperlink{class_basic_tutorial__00_a1bf709417d654dffc2ea10987412b912}{create\+Camera} (void)
+\item 
+virtual void \hyperlink{class_basic_tutorial__00_aba97a29d983586d2dc8e108d3bccf721}{choose\+Scene\+Manager} (void)
+\item 
+virtual bool \hyperlink{class_basic_tutorial__00_a94e281a96584a25bf57b1c5e73737c81}{frame\+Started} (const Ogre\+::\+Frame\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em In the requirement of animation with key\+:0. \end{DoxyCompactList}\item 
+virtual Vector3 \hyperlink{class_basic_tutorial__00_a90e8fc0b5789c3897a87b08e45bf6fe0}{move\+\_\+down} (Vector3, float)
+\begin{DoxyCompactList}\small\item\em this function is for the key\+:0 animation \end{DoxyCompactList}\item 
+virtual Vector3 \hyperlink{class_basic_tutorial__00_a3bec198c9f41ab006a1193311dfb4e0b}{move\+\_\+up} (Vector3, float)
+\begin{DoxyCompactList}\small\item\em this function is for the key\+:0 animation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_basic_tutorial__00_a6d4684502f2f7b2cf628a975d7750d8e}{create\+Viewport\+\_\+00} (void)
+\begin{DoxyCompactList}\small\item\em Set the viewport with camera\mbox{[}0\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{class_basic_tutorial__00_a2801a2f0d91d80b471da48344d2ccccf}{create\+Viewport\+\_\+01} (void)
+\begin{DoxyCompactList}\small\item\em Set the viewport with camera\mbox{[}1\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{class_basic_tutorial__00_a3479c50dbf8dc06a7ea77014eb94c6e7}{create\+Camera\+\_\+00} ()
+\item 
+void \hyperlink{class_basic_tutorial__00_a8745a127adeb69fa769f832fd41412c0}{create\+Camera\+\_\+01} ()
+\item 
+void \hyperlink{class_basic_tutorial__00_aa84173e509858146cbfb98274c1ef56e}{create\+Scene\+\_\+00} ()
+\begin{DoxyCompactList}\small\item\em First specify the scene manager by assign. \end{DoxyCompactList}\item 
+void \hyperlink{class_basic_tutorial__00_aad14e1ca565797c4b7dcff31bc0e1494}{create\+Scene\+\_\+01} ()
+\begin{DoxyCompactList}\small\item\em In the second scene I\textquotesingle{}ve done the following things\+: \end{DoxyCompactList}\item 
+bool \hyperlink{class_basic_tutorial__00_adc1a0b32d78b1980b3ee51a1b1e1e69b}{key\+Pressed} (const O\+I\+S\+::\+Key\+Event \&arg)
+\begin{DoxyCompactList}\small\item\em Handle the key event. \end{DoxyCompactList}\item 
+bool \hyperlink{class_basic_tutorial__00_aacca7a0a2a5a0e0d007b9c6c30b4941b}{key\+Released} (const O\+I\+S\+::\+Key\+Event \&arg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ogre\+::\+Viewport $\ast$ \hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{m\+Viewport\+Arr} \mbox{[}8\mbox{]}
+\item 
+Ogre\+::\+Camera $\ast$ \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{m\+Camera\+Arr} \mbox{[}8\mbox{]}
+\item 
+Ogre\+::\+Scene\+Manager $\ast$ \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{m\+Scene\+Mgr\+Arr} \mbox{[}8\mbox{]}
+\item 
+Ogre\+Bites\+::\+Sdk\+Camera\+Man $\ast$ \hyperlink{class_basic_tutorial__00_a700c07f924c71e9fa1885a46f599d934}{m\+Camera\+Man\+Arr} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+3D Game Programming ~\newline
+My Name\+: Li-\/\+Che Chien ~\newline
+My ID\+: 0316235 ~\newline
+My Email\+: \href{mailto:richard@hotmail.com}{\tt richard@hotmail.\+com} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_basic_tutorial__00_a6b55068822076b28e7819b1878e95684}\label{class_basic_tutorial__00_a6b55068822076b28e7819b1878e95684}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{Basic\+Tutorial\+\_\+00()}{BasicTutorial\_00()}}
+{\footnotesize\ttfamily Basic\+Tutorial\+\_\+00\+::\+Basic\+Tutorial\+\_\+00 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+31 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_basic_tutorial__00_aba97a29d983586d2dc8e108d3bccf721}\label{class_basic_tutorial__00_aba97a29d983586d2dc8e108d3bccf721}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!choose\+Scene\+Manager@{choose\+Scene\+Manager}}
+\index{choose\+Scene\+Manager@{choose\+Scene\+Manager}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{choose\+Scene\+Manager()}{chooseSceneManager()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::choose\+Scene\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_base_application_ad5bc9655041e1849a4c13f444a3712bd}{Base\+Application}.
+
+
+\begin{DoxyCode}
+34 \{
+35     \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{mSceneMgrArr}[0] = \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot}
+36         ->createSceneManager(ST\_GENERIC, \textcolor{stringliteral}{"primary"});
+37     \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{mSceneMgrArr}[1] = \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot}
+38         ->createSceneManager(ST\_GENERIC, \textcolor{stringliteral}{"secondary"});
+39 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a1bf709417d654dffc2ea10987412b912}\label{class_basic_tutorial__00_a1bf709417d654dffc2ea10987412b912}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Camera@{create\+Camera}}
+\index{create\+Camera@{create\+Camera}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Camera()}{createCamera()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Camera (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_base_application_afa9d51527763cf9aee9cd4e1b1039d55}{Base\+Application}.
+
+
+\begin{DoxyCode}
+261                                         \{
+262     \textcolor{comment}{//Do not modify}
+263     \hyperlink{class_basic_tutorial__00_a3479c50dbf8dc06a7ea77014eb94c6e7}{createCamera\_00}();
+264     \hyperlink{class_basic_tutorial__00_a8745a127adeb69fa769f832fd41412c0}{createCamera\_01}();
+265     \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan} = \hyperlink{class_basic_tutorial__00_a700c07f924c71e9fa1885a46f599d934}{mCameraManArr}[0];
+266     \textcolor{comment}{//mCameraMan = mCameraManArr[1];}
+267 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a3479c50dbf8dc06a7ea77014eb94c6e7}\label{class_basic_tutorial__00_a3479c50dbf8dc06a7ea77014eb94c6e7}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Camera\+\_\+00@{create\+Camera\+\_\+00}}
+\index{create\+Camera\+\_\+00@{create\+Camera\+\_\+00}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Camera\+\_\+00()}{createCamera\_00()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Camera\+\_\+00 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+42 \{
+43     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} = \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{mSceneMgrArr}[0];
+44     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera} = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[0] = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createCamera(\textcolor{stringliteral}{"PlayerCam"});
+45     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setPosition(Ogre::Vector3(120,300,600));
+46     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->lookAt(Ogre::Vector3(120,0,0));
+47     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setNearClipDistance(5);
+48     \hyperlink{class_basic_tutorial__00_a700c07f924c71e9fa1885a46f599d934}{mCameraManArr}[0] = \textcolor{keyword}{new} OgreBites::SdkCameraMan(\hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera});   \textcolor{comment}{// create a default
+       camera controller}
+49 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a8745a127adeb69fa769f832fd41412c0}\label{class_basic_tutorial__00_a8745a127adeb69fa769f832fd41412c0}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Camera\+\_\+01@{create\+Camera\+\_\+01}}
+\index{create\+Camera\+\_\+01@{create\+Camera\+\_\+01}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Camera\+\_\+01()}{createCamera\_01()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Camera\+\_\+01 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+52 \{
+53     \textcolor{comment}{// add your own stuff}
+54     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} = \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{mSceneMgrArr}[1];
+55     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera} = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[1] = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createCamera(\textcolor{stringliteral}{"SceneTwoCam"});
+56     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setPosition(Ogre::Vector3(0, 350, 0.001));
+57     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->lookAt(Ogre::Vector3(0, 0, 0));
+58     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setNearClipDistance(5);
+59 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a15a3d4673724ec99077ce992f996a550}\label{class_basic_tutorial__00_a15a3d4673724ec99077ce992f996a550}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Scene@{create\+Scene}}
+\index{create\+Scene@{create\+Scene}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Scene()}{createScene()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Scene (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{class_base_application_aa97beeb4059b17d0ec22eae33286ec2d}{Base\+Application}.
+
+
+\begin{DoxyCode}
+269                                          \{
+270     \textcolor{comment}{//Do not modify}
+271     \hyperlink{class_basic_tutorial__00_aa84173e509858146cbfb98274c1ef56e}{createScene\_00}();
+272     \hyperlink{class_basic_tutorial__00_aad14e1ca565797c4b7dcff31bc0e1494}{createScene\_01}();
+273     \textcolor{comment}{//mSceneMgr = mSceneMgrArr[0]; // active SceneManager}
+274     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} = \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{mSceneMgrArr}[1]; \textcolor{comment}{// active SceneManager}
+275     \textcolor{comment}{//}
+276     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera} = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[0];
+277     \textcolor{comment}{//mCamera = mCameraArr[1];}
+278 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_aa84173e509858146cbfb98274c1ef56e}\label{class_basic_tutorial__00_aa84173e509858146cbfb98274c1ef56e}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Scene\+\_\+00@{create\+Scene\+\_\+00}}
+\index{create\+Scene\+\_\+00@{create\+Scene\+\_\+00}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Scene\+\_\+00()}{createScene\_00()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Scene\+\_\+00 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+First specify the scene manager by assign. 
+
+I create the plane with given attributes
+
+also set the ambient light and shadow with given number
+
+Then I start to create two pengiuns and ground and cubes and wall
+\begin{DoxyEnumerate}
+\item Create objects entity .
+\item Create scene node in scene manager meanwhile set its position or angle.
+\item Attach entity to scene node.
+\end{DoxyEnumerate}
+
+for 72 cubes using a for loop with given values and set its meterial with chrome and Sphere\+Mapped\+Rusty\+Steel.
+
+After all objects created, I set two point light with different position. 
+
+References PI.
+
+
+\begin{DoxyCode}
+87 \{
+88     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} = \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{mSceneMgrArr}[0];
+89     \textcolor{keywordtype}{int} numCubes = 72;
+90     \textcolor{keywordtype}{int} L = 255;
+91 
+92     \textcolor{comment}{// add your own stuff}
+93     Plane plane(Vector3::UNIT\_Y, 0);
+94     Plane plane1(Vector3::UNIT\_Z,0);
+95 
+96     MeshManager::getSingleton().createPlane(
+97         \textcolor{stringliteral}{"ground"},
+98         ResourceGroupManager::DEFAULT\_RESOURCE\_GROUP\_NAME,
+99         plane,
+100         1500,1500, \textcolor{comment}{// width, height}
+101         20,20, \textcolor{comment}{// x- and y-segments}
+102         \textcolor{keyword}{true}, \textcolor{comment}{// normal}
+103         1, \textcolor{comment}{// num texture sets}
+104         5,5, \textcolor{comment}{// x- and y-tiles}
+105         Vector3::UNIT\_Z \textcolor{comment}{// upward vector}
+106     ); 
+107 
+108      MeshManager::getSingleton().createPlane(
+109         \textcolor{stringliteral}{"wall"},
+110         ResourceGroupManager::DEFAULT\_RESOURCE\_GROUP\_NAME,
+111         plane1,
+112         1500,1500,
+113         20,20,
+114         \textcolor{keyword}{true},
+115         1,
+116         5,5,
+117         Vector3::UNIT\_Y
+118     );
+119 
+120     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->setAmbientLight(ColourValue(0.5,0.5,0.5));
+121     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->setShadowTechnique(SHADOWTYPE\_STENCIL\_ADDITIVE);
+122     Entity* entPenguin1 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createEntity(\textcolor{stringliteral}{"Pengiun1"},\textcolor{stringliteral}{"penguin.mesh"});
+123     Entity* entPenguin2 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createEntity(\textcolor{stringliteral}{"Pengiun2"},\textcolor{stringliteral}{"penguin.mesh"});
+124     Entity* entPlane1 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createEntity(\textcolor{stringliteral}{"Ground"},\textcolor{stringliteral}{"ground"});
+125     Entity* entPlane2 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createEntity(\textcolor{stringliteral}{"Wall"}, \textcolor{stringliteral}{"wall"});
+126     entPlane2->setCastShadows(\textcolor{keyword}{false});
+127     entPlane2->setMaterialName(\textcolor{stringliteral}{"Examples/Rockwall"});
+128 
+129     SceneNode *node0 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+130         ->getRootSceneNode()
+131         ->createChildSceneNode();
+132 
+133     SceneNode *node1 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+134         ->getRootSceneNode()
+135         ->createChildSceneNode(
+136             \textcolor{stringliteral}{"PengiunNode"},
+137             Vector3(0.0, 50.0, 0.0));
+138 
+139     SceneNode *node2 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+140         ->getRootSceneNode()
+141         ->createChildSceneNode(
+142             Vector3(150.0, 20.0, 0.0));
+143 
+144      SceneNode *node3 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+145         ->getRootSceneNode()
+146         ->createChildSceneNode();
+147 
+148     node1 -> scale(2,3,2);
+149     node2 -> yaw(Degree(-90));
+150     node3 -> setPosition(0,0,-750);
+151     node0 -> attachObject(entPlane1);
+152     node3 -> attachObject(entPlane2);
+153     node1 -> attachObject(entPenguin1);
+154     node2 -> attachObject(entPenguin2);
+155 
+156     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numCubes; ++i) \{
+157         String name;
+158         genNameUsingIndex(\textcolor{stringliteral}{"c"}, i, name);
+159         Entity *ent = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createEntity(name, \textcolor{stringliteral}{"cube.mesh"});
+160         ent->setMaterialName(\textcolor{stringliteral}{"Examples/SphereMappedRustySteel"});
+161         AxisAlignedBox bb = ent->getBoundingBox();
+162         \textcolor{keywordtype}{float} cubeSize = bb.getMaximum().x - bb.getMinimum().x;
+163         \textcolor{comment}{//x = 0, y = 0, z = -125;}
+164         SceneNode *snode = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+165         ->getRootSceneNode()
+166         ->createChildSceneNode();
+167         snode->attachObject(ent);
+168         \textcolor{keywordtype}{double} fx = i/(double) (numCubes-1); \textcolor{comment}{// in range [0,1]}
+169         \textcolor{keywordtype}{double} h = (1+sin(fx*\hyperlink{_tutorial_application_8cpp_aa08a577393243b86dfd2a97e61443673}{PI}*4))*50; \textcolor{comment}{// height}
+170         \textcolor{keywordtype}{double} circle\_radius = 100;
+171         \textcolor{keywordtype}{double} x1 = circle\_radius*cos(fx*\hyperlink{_tutorial_application_8cpp_aa08a577393243b86dfd2a97e61443673}{PI}*2);
+172         \textcolor{keywordtype}{double} z1 = circle\_radius*sin(fx*\hyperlink{_tutorial_application_8cpp_aa08a577393243b86dfd2a97e61443673}{PI}*2);
+173         Real unitF = 1.0/cubeSize/numCubes*L*0.8;
+174         snode->scale(unitF, h/cubeSize, unitF);
+175         snode->setPosition(x1, 50, z1);
+176     \} 
+177 
+178     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numCubes; ++i) \{
+179         String name;
+180         genNameUsingIndex(\textcolor{stringliteral}{"cc"}, i, name);
+181         Entity *ent = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createEntity(name, \textcolor{stringliteral}{"cube.mesh"});
+182         ent->setMaterialName(\textcolor{stringliteral}{"Examples/Chrome"});
+183         AxisAlignedBox bb = ent->getBoundingBox();
+184         \textcolor{keywordtype}{float} cubeSize = bb.getMaximum().x - bb.getMinimum().x;
+185         \textcolor{comment}{//x = 0, y = 0, z = -125;}
+186         SceneNode *snode = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+187         ->getRootSceneNode()
+188         ->createChildSceneNode();
+189         snode->attachObject(ent);
+190         \textcolor{keywordtype}{double} fx = 2*i/(double) (numCubes-1); \textcolor{comment}{//i from 0 to numCubes-1}
+191         \textcolor{keywordtype}{double} x = fx*L - L/2.0;
+192         \textcolor{keywordtype}{double} h = (1+cos(fx*3.1415*2.0))*20; \textcolor{comment}{// height}
+193         Real unitF = 1.0/cubeSize/numCubes*L*0.8;
+194         snode->scale(unitF, h/cubeSize, unitF);
+195         snode->setPosition(x, 20, 125);
+196     \} 
+197 
+198     Light *light = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} -> createLight(\textcolor{stringliteral}{"Light1"});
+199     light->setType(Light::LT\_POINT);
+200     light->setPosition(Vector3(150, 250, 100));
+201     light->setDiffuseColour(0.0, 1.0, 0.0);
+202     light->setSpecularColour(0.0, 1.0, 0.0);
+203     Light *light2 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} -> createLight(\textcolor{stringliteral}{"Light2"});
+204     light2->setType(Light::LT\_POINT);
+205     light2->setPosition(Vector3(-150, 300, 250));
+206     light2->setDiffuseColour(0.5, 0.5, 0.5);
+207     light2->setSpecularColour(0.5, 0.5, 0.5);
+208 
+209 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_aad14e1ca565797c4b7dcff31bc0e1494}\label{class_basic_tutorial__00_aad14e1ca565797c4b7dcff31bc0e1494}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Scene\+\_\+01@{create\+Scene\+\_\+01}}
+\index{create\+Scene\+\_\+01@{create\+Scene\+\_\+01}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Scene\+\_\+01()}{createScene\_01()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Scene\+\_\+01 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+In the second scene I\textquotesingle{}ve done the following things\+: 
+
+
+\begin{DoxyEnumerate}
+\item Set Ambient light black(0,0,0) and shadow
+\item Create point light
+\item Create a plane and a cube entity with new material -\/ green
+\item Scale the cube with (0.\+5,0.\+5,0.\+5) and attach to scene node 
+\end{DoxyEnumerate}
+\begin{DoxyCode}
+212 \{
+213     \textcolor{comment}{// add your own stuff}
+214     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} = \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{mSceneMgrArr}[1];
+215     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->setAmbientLight(ColourValue(0,0,0));
+216     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->setShadowTechnique(SHADOWTYPE\_STENCIL\_ADDITIVE);
+217 
+218     Light *light = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} -> createLight(\textcolor{stringliteral}{"Light3"});
+219     light->setType(Light::LT\_POINT);
+220     light->setPosition(Vector3(100, 150, 250));
+221     light->setDiffuseColour(0.0, 0.0, 1.0); \textcolor{comment}{//blue}
+222     light->setSpecularColour(0.0,0.0, 1.0); \textcolor{comment}{//blue}
+223 
+224     Plane plane(Vector3::UNIT\_Y, 0);
+225     MeshManager::getSingleton().createPlane(
+226         \textcolor{stringliteral}{"plane"},
+227         ResourceGroupManager::DEFAULT\_RESOURCE\_GROUP\_NAME,
+228         plane,
+229         1500,1500, \textcolor{comment}{// width, height}
+230         20,20, \textcolor{comment}{// x- and y-segments}
+231         \textcolor{keyword}{true}, \textcolor{comment}{// normal}
+232         1, \textcolor{comment}{// num texture sets}
+233         5,5, \textcolor{comment}{// x- and y-tiles}
+234         Vector3::UNIT\_Z \textcolor{comment}{// upward vector}
+235     ); 
+236     Entity* entPlane = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createEntity(\textcolor{stringliteral}{"Plane"},\textcolor{stringliteral}{"plane"});
+237     Entity* ent = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createEntity(\textcolor{stringliteral}{"Cube"},\textcolor{stringliteral}{"cube.mesh"});
+238     ent->setMaterialName(\textcolor{stringliteral}{"Examples/green"});
+239 
+240     SceneNode *node = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+241         ->getRootSceneNode()
+242         ->createChildSceneNode();
+243 
+244     SceneNode *node1 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+245         ->getRootSceneNode()
+246         ->createChildSceneNode(
+247             Vector3(50.0, 0.0, 0.0));
+248 
+249     node1 -> scale(0.5,0.5,0.5);
+250     node -> attachObject(entPlane);
+251     node1 -> attachObject(ent);
+252 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a6d4684502f2f7b2cf628a975d7750d8e}\label{class_basic_tutorial__00_a6d4684502f2f7b2cf628a975d7750d8e}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Viewport\+\_\+00@{create\+Viewport\+\_\+00}}
+\index{create\+Viewport\+\_\+00@{create\+Viewport\+\_\+00}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Viewport\+\_\+00()}{createViewport\_00()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Viewport\+\_\+00 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set the viewport with camera\mbox{[}0\mbox{]}. 
+
+Set the background blue(0,0,1) and Z-\/order with default 0 (at the bottom)
+
+and add it to the viewport arr. 
+\begin{DoxyCode}
+63 \{
+64     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera} = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[0];
+65     Ogre::Viewport* vp = \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->addViewport(\hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera});
+66     vp->setBackgroundColour(Ogre::ColourValue(0,0.0,1.0));
+67     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setAspectRatio(
+68         Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+69 
+70     \hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[0] = vp;
+71 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a2801a2f0d91d80b471da48344d2ccccf}\label{class_basic_tutorial__00_a2801a2f0d91d80b471da48344d2ccccf}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Viewport\+\_\+01@{create\+Viewport\+\_\+01}}
+\index{create\+Viewport\+\_\+01@{create\+Viewport\+\_\+01}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Viewport\+\_\+01()}{createViewport\_01()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Viewport\+\_\+01 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set the viewport with camera\mbox{[}1\mbox{]}. 
+
+Set the background blue(0,0,1) and Z-\/order with 1 (at the top)
+
+and add it to the viewport arr. 
+\begin{DoxyCode}
+74 \{
+75     \textcolor{comment}{// add your own stuff}
+76     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera} = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[1];
+77     Ogre::Viewport* vp = \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->addViewport(\hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera},1,0.75,0,0.25,0.25);
+78     vp->setOverlaysEnabled(\textcolor{keyword}{false});
+79     vp->setBackgroundColour(Ogre::ColourValue(0,0.0,1.0));
+80     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setAspectRatio(
+81         Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+82 
+83     \hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[1] = vp;
+84 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_adc2454d9f8226e0958ecf702f355846e}\label{class_basic_tutorial__00_adc2454d9f8226e0958ecf702f355846e}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!create\+Viewports@{create\+Viewports}}
+\index{create\+Viewports@{create\+Viewports}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{create\+Viewports()}{createViewports()}}
+{\footnotesize\ttfamily void Basic\+Tutorial\+\_\+00\+::create\+Viewports (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_base_application_a1f8f6730cae6ec769d8730b1af48486e}{Base\+Application}.
+
+
+\begin{DoxyCode}
+255 \{
+256     \textcolor{comment}{//Do not modify}
+257     \hyperlink{class_basic_tutorial__00_a6d4684502f2f7b2cf628a975d7750d8e}{createViewport\_00}();
+258     \hyperlink{class_basic_tutorial__00_a2801a2f0d91d80b471da48344d2ccccf}{createViewport\_01}();
+259 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a94e281a96584a25bf57b1c5e73737c81}\label{class_basic_tutorial__00_a94e281a96584a25bf57b1c5e73737c81}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!frame\+Started@{frame\+Started}}
+\index{frame\+Started@{frame\+Started}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{frame\+Started()}{frameStarted()}}
+{\footnotesize\ttfamily bool Basic\+Tutorial\+\_\+00\+::frame\+Started (\begin{DoxyParamCaption}\item[{const Ogre\+::\+Frame\+Event \&}]{evt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+In the requirement of animation with key\+:0. 
+
+I use several flags to indicates the state
+
+first I use zero\+\_\+flag to check whether key\+:0 being click so animation starts
+
+then I use time\+\_\+step as a counter to count the stage during animation
+
+every fram time\+\_\+step will increase by 0.\+002, which is the appropriate value I figured out from repeating tests
+
+and then I use a pengiun\+State flag to indicate whether its moving up or down
+
+if up, it couldnt exceed 280, if down, it couldnt be lower than 0. 
+
+References pengiun\+State, time\+\_\+step, and zero\+\_\+flag.
+
+
+\begin{DoxyCode}
+451 \{
+452     \textcolor{keywordtype}{bool} flg = Ogre::FrameListener::frameStarted(evt);
+453     \textcolor{comment}{// add your own stuff}
+454     \textcolor{keywordflow}{if} (\hyperlink{_tutorial_application_8cpp_a99a5608017531b46cd3234d001ec1dcb}{zero\_flag})\{
+455         \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} = \hyperlink{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}{mSceneMgrArr}[0];
+456         Entity* pengiun = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->getEntity(\textcolor{stringliteral}{"Pengiun1"});
+457         SceneNode *node1 = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}
+458             ->getSceneNode(\textcolor{stringliteral}{"PengiunNode"});
+459 
+460         Vector3 position = node1->getPosition();
+461 
+462         \textcolor{keywordflow}{if} (!\hyperlink{_tutorial_application_8cpp_a1bf2c695da5bfaa4bc465da5b204289c}{pengiunState})\{
+463             position = \hyperlink{class_basic_tutorial__00_a90e8fc0b5789c3897a87b08e45bf6fe0}{move\_down}(position, \hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step});
+464             \textcolor{keywordflow}{if} (position.y < 0)\{
+465                 \hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step} = 0;
+466                 \hyperlink{_tutorial_application_8cpp_a1bf2c695da5bfaa4bc465da5b204289c}{pengiunState} = 1;
+467             \}
+468         \}
+469 
+470         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{_tutorial_application_8cpp_a1bf2c695da5bfaa4bc465da5b204289c}{pengiunState})\{
+471             position = \hyperlink{class_basic_tutorial__00_a3bec198c9f41ab006a1193311dfb4e0b}{move\_up}(position, \hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step});
+472             \textcolor{keywordflow}{if} (position.y > 280)\{
+473                 \hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step} = 0;
+474                 \hyperlink{_tutorial_application_8cpp_a1bf2c695da5bfaa4bc465da5b204289c}{pengiunState} = 0;
+475             \}
+476         \}
+477 
+478         node1->setPosition(position);
+479         \hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step} += 0.002;
+480     \}
+481     \textcolor{keywordflow}{return} flg;
+482 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_adc1a0b32d78b1980b3ee51a1b1e1e69b}\label{class_basic_tutorial__00_adc1a0b32d78b1980b3ee51a1b1e1e69b}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!key\+Pressed@{key\+Pressed}}
+\index{key\+Pressed@{key\+Pressed}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{key\+Pressed()}{keyPressed()}}
+{\footnotesize\ttfamily bool Basic\+Tutorial\+\_\+00\+::key\+Pressed (\begin{DoxyParamCaption}\item[{const O\+I\+S\+::\+Key\+Event \&}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handle the key event. 
+
+From 1$\sim$5, just change the position and direction of camera
+
+for M,N , I have to reset the viewport to new position and ratio, also change the z-\/order 
+
+Reimplemented from \hyperlink{class_base_application_acfa977f04e435f18018ece805c1277ec}{Base\+Application}.
+
+
+
+References Base\+Application\+::key\+Pressed(), and zero\+\_\+flag.
+
+
+\begin{DoxyCode}
+288 \{
+289     \textcolor{keywordtype}{bool} flg = \textcolor{keyword}{true};
+290     stringstream ss;
+291     ss << arg.key;
+292     String msg;
+293     ss >> msg;
+294     msg += \textcolor{stringliteral}{":*** keyPressed ***\(\backslash\)n"};
+295     Ogre::LogManager::getSingletonPtr()->logMessage( msg );
+296 
+297     
+298     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_C ) \{
+299         
+300         ss.str(\textcolor{stringliteral}{""});
+301         ss.clear();
+302         
+303         Vector3 pos = \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()->getPosition(); 
+304         ss << std::fixed << std::setprecision(2) 
+305             << \textcolor{stringliteral}{"CameraPosition:"} 
+306             << pos.x << \textcolor{stringliteral}{"\(\backslash\)t"} 
+307             << pos.y << \textcolor{stringliteral}{"\(\backslash\)t"} 
+308             << pos.z << \textcolor{stringliteral}{"\(\backslash\)n"};
+309         Ogre::LogManager::getSingletonPtr()
+310             ->logMessage( ss.str() );
+311         \textcolor{comment}{//}
+312         ss.str(\textcolor{stringliteral}{""});
+313         ss.clear();
+314         Vector3 dir = \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()->getDirection();
+315         ss << std::fixed << std::setprecision(2) 
+316             << \textcolor{stringliteral}{"CameraDirection:"} 
+317             << dir.x << \textcolor{stringliteral}{"\(\backslash\)t"} 
+318             << dir.y << \textcolor{stringliteral}{"\(\backslash\)t"} 
+319             << dir.z << \textcolor{stringliteral}{"\(\backslash\)n"};
+320         Ogre::LogManager::getSingletonPtr()
+321             ->logMessage( ss.str() );
+322     \}
+323 
+324     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_1 ) \{
+325         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+326             ->setPosition(Vector3(98.14,    450.69, 964.20));
+327         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+328             ->setDirection(Vector3(-0.01,   -0.30,  -0.95));
+329     \}
+330 
+331     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_2 ) \{
+332         \textcolor{comment}{// add your own stuff}
+333         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+334             ->setPosition(Vector3(-1463.00, 606.45, -513.24));
+335         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+336             ->setDirection(Vector3(0.88, -0.47, 0.10));
+337     \}
+338 
+339     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_3 ) \{
+340         \textcolor{comment}{// add your own stuff}
+341         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+342             ->setPosition(Vector3(-1356.16, 634.32, -964.51));
+343         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+344             ->setDirection(Vector3(0.71,    -0.44,  0.55));
+345     \}
+346 
+347     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_4 ) \{
+348          \textcolor{comment}{// add your own stuff}
+349         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+350             ->setPosition(Vector3(40.39,    155.23, 251.20));
+351         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+352             ->setDirection(Vector3(-0.02,   -0.41,  -0.91));
+353     \}
+354 
+355     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_5 ) \{
+356         \textcolor{comment}{// add your own stuff}
+357         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+358             ->setPosition(Vector3(19.94,    822.63, 30.79));
+359         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->getCamera()
+360             ->setDirection(Vector3(0.00,    -0.99,  -0.11));
+361     \}
+362 
+363     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_M ) \{
+364         
+365        Camera *cam1 = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[0];
+366        Camera *cam2 = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[1];
+367 
+368        \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->removeViewport(\hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[0]->getZOrder());
+369        \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->removeViewport(\hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[1]->getZOrder());
+370     Ogre::Viewport* vp = \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->addViewport(cam2);
+371     vp->setOverlaysEnabled(\textcolor{keyword}{false});
+372     vp->setBackgroundColour(Ogre::ColourValue(0,0.0,1.0));
+373     cam2->setAspectRatio(
+374         Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+375     \hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[1] = vp;
+376 
+377     vp = \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->addViewport(
+378         cam1,
+379         1,
+380         0,
+381         0,
+382         0.5,
+383         0.2);
+384     vp->setBackgroundColour(Ogre::ColourValue(0,0.5,0.0));
+385     cam1->setAspectRatio(
+386         Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+387         \hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[0] = vp;          
+388     \}
+389 
+390     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_N ) \{
+391         \textcolor{comment}{// add your own stuff}
+392        Camera *cam1 = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[0];
+393        Camera *cam2 = \hyperlink{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}{mCameraArr}[1];
+394 
+395        \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->removeViewport(\hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[0]->getZOrder());
+396        \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->removeViewport(\hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[1]->getZOrder());
+397     Ogre::Viewport* vp = \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->addViewport(cam2,
+398         1,
+399         0.5,
+400         0.3,
+401         0.5,
+402         0.2);
+403     vp->setOverlaysEnabled(\textcolor{keyword}{false});
+404     vp->setBackgroundColour(Ogre::ColourValue(0,0.0,1.0));
+405     cam2->setAspectRatio(
+406         Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+407     \hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[1] = vp;    
+408 
+409     vp = \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->addViewport(cam1);
+410     vp->setBackgroundColour(Ogre::ColourValue(1.0,0.0,0.0));
+411     cam1->setAspectRatio(
+412         Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+413     \hyperlink{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}{mViewportArr}[0] = vp;     
+414     \}
+415 
+416     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_0 ) \{
+417         \textcolor{keywordflow}{switch}(\hyperlink{_tutorial_application_8cpp_a99a5608017531b46cd3234d001ec1dcb}{zero\_flag})\{
+418             \textcolor{keywordflow}{case} \textcolor{keyword}{true}:
+419                 \hyperlink{_tutorial_application_8cpp_a99a5608017531b46cd3234d001ec1dcb}{zero\_flag} = \textcolor{keyword}{false};
+420                 \textcolor{keywordflow}{break};
+421             \textcolor{keywordflow}{case} \textcolor{keyword}{false}:
+422                 \hyperlink{_tutorial_application_8cpp_a99a5608017531b46cd3234d001ec1dcb}{zero\_flag} = \textcolor{keyword}{true};
+423                 \textcolor{keywordflow}{break};
+424         \}
+425     \}
+426 
+427     \textcolor{comment}{// Do not delete this line}
+428     \hyperlink{class_base_application_acfa977f04e435f18018ece805c1277ec}{BaseApplication::keyPressed}(arg);
+429 
+430     \textcolor{keywordflow}{return} flg;
+431 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_aacca7a0a2a5a0e0d007b9c6c30b4941b}\label{class_basic_tutorial__00_aacca7a0a2a5a0e0d007b9c6c30b4941b}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!key\+Released@{key\+Released}}
+\index{key\+Released@{key\+Released}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{key\+Released()}{keyReleased()}}
+{\footnotesize\ttfamily bool Basic\+Tutorial\+\_\+00\+::key\+Released (\begin{DoxyParamCaption}\item[{const O\+I\+S\+::\+Key\+Event \&}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_base_application_aba5c7c9dea7a0efc58b89310bae547e5}{Base\+Application}.
+
+
+
+References Base\+Application\+::key\+Released().
+
+
+\begin{DoxyCode}
+435 \{
+436     \textcolor{keywordtype}{bool} flg = \textcolor{keyword}{true};
+437     stringstream ss;
+438     ss << arg.key;
+439     String msg;
+440     ss >> msg;
+441     msg += \textcolor{stringliteral}{":*** keyReleased ***\(\backslash\)n"};
+442     
+443     Ogre::LogManager::getSingletonPtr()->logMessage( msg );
+444 
+445     \hyperlink{class_base_application_aba5c7c9dea7a0efc58b89310bae547e5}{BaseApplication::keyReleased}(arg);
+446 
+447     \textcolor{keywordflow}{return} flg;
+448 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a90e8fc0b5789c3897a87b08e45bf6fe0}\label{class_basic_tutorial__00_a90e8fc0b5789c3897a87b08e45bf6fe0}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!move\+\_\+down@{move\+\_\+down}}
+\index{move\+\_\+down@{move\+\_\+down}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{move\+\_\+down()}{move\_down()}}
+{\footnotesize\ttfamily Vector3 Basic\+Tutorial\+\_\+00\+::move\+\_\+down (\begin{DoxyParamCaption}\item[{Vector3}]{pos,  }\item[{float}]{time\+\_\+step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+this function is for the key\+:0 animation 
+
+which calculates the new position when pengiun move down. 
+
+References time\+\_\+step.
+
+
+\begin{DoxyCode}
+484                                                                \{
+485     Vector3 velocity = Vector3(0.0,0.0,0.0);
+486     Vector3 acceleration = Vector3(0.0, -50.8, 0.0);
+487     
+488     velocity += acceleration*\hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step};
+489     \textcolor{keywordflow}{return} pos + velocity*\hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step};
+490 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_tutorial__00_a3bec198c9f41ab006a1193311dfb4e0b}\label{class_basic_tutorial__00_a3bec198c9f41ab006a1193311dfb4e0b}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!move\+\_\+up@{move\+\_\+up}}
+\index{move\+\_\+up@{move\+\_\+up}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{move\+\_\+up()}{move\_up()}}
+{\footnotesize\ttfamily Vector3 Basic\+Tutorial\+\_\+00\+::move\+\_\+up (\begin{DoxyParamCaption}\item[{Vector3}]{pos,  }\item[{float}]{time\+\_\+step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+this function is for the key\+:0 animation 
+
+which calculates the new position when pengiun move up. 
+
+References time\+\_\+step.
+
+
+\begin{DoxyCode}
+492                                                              \{
+493     Vector3 velocity = Vector3(0,0,0);
+494     Vector3 acceleration = Vector3(0.0, 20.8, 0.0);
+495     
+496     \textcolor{keywordflow}{if} (velocity.y <= 80)
+497     velocity += acceleration*\hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step};
+498     \textcolor{keywordflow}{return} pos + velocity*\hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\_step};
+499 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}\label{class_basic_tutorial__00_af8d457d912286a98c0975c52d4faf910}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!m\+Camera\+Arr@{m\+Camera\+Arr}}
+\index{m\+Camera\+Arr@{m\+Camera\+Arr}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{m\+Camera\+Arr}{mCameraArr}}
+{\footnotesize\ttfamily Ogre\+::\+Camera$\ast$ Basic\+Tutorial\+\_\+00\+::m\+Camera\+Arr\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_basic_tutorial__00_a700c07f924c71e9fa1885a46f599d934}\label{class_basic_tutorial__00_a700c07f924c71e9fa1885a46f599d934}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!m\+Camera\+Man\+Arr@{m\+Camera\+Man\+Arr}}
+\index{m\+Camera\+Man\+Arr@{m\+Camera\+Man\+Arr}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{m\+Camera\+Man\+Arr}{mCameraManArr}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Sdk\+Camera\+Man$\ast$ Basic\+Tutorial\+\_\+00\+::m\+Camera\+Man\+Arr\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}\label{class_basic_tutorial__00_a603779b6087698c57b7989e16d8a9b93}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!m\+Scene\+Mgr\+Arr@{m\+Scene\+Mgr\+Arr}}
+\index{m\+Scene\+Mgr\+Arr@{m\+Scene\+Mgr\+Arr}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{m\+Scene\+Mgr\+Arr}{mSceneMgrArr}}
+{\footnotesize\ttfamily Ogre\+::\+Scene\+Manager$\ast$ Basic\+Tutorial\+\_\+00\+::m\+Scene\+Mgr\+Arr\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}\label{class_basic_tutorial__00_a6676a92b50e9b43634d4c66488537b73}} 
+\index{Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}!m\+Viewport\+Arr@{m\+Viewport\+Arr}}
+\index{m\+Viewport\+Arr@{m\+Viewport\+Arr}!Basic\+Tutorial\+\_\+00@{Basic\+Tutorial\+\_\+00}}
+\subsubsection{\texorpdfstring{m\+Viewport\+Arr}{mViewportArr}}
+{\footnotesize\ttfamily Ogre\+::\+Viewport$\ast$ Basic\+Tutorial\+\_\+00\+::m\+Viewport\+Arr\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_tutorial_application_8h}{Tutorial\+Application.\+h}\item 
+\hyperlink{_tutorial_application_8cpp}{Tutorial\+Application.\+cpp}\end{DoxyCompactItemize}

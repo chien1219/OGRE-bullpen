@@ -1,0 +1,88 @@
+\hypertarget{_tutorial_application_8cpp}{}\section{Tutorial\+Application.\+cpp File Reference}
+\label{_tutorial_application_8cpp}\index{Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}}
+{\ttfamily \#include \char`\"{}Tutorial\+Application.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Basic\+Tools.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_tutorial_application_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \hyperlink{_tutorial_application_8cpp_aa08a577393243b86dfd2a97e61443673}{PI} = 3.\+141592654
+\item 
+float \hyperlink{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}{time\+\_\+step} = 0
+\item 
+int \hyperlink{_tutorial_application_8cpp_a1bf2c695da5bfaa4bc465da5b204289c}{pengiun\+State} = 0
+\item 
+bool \hyperlink{_tutorial_application_8cpp_a99a5608017531b46cd3234d001ec1dcb}{zero\+\_\+flag} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_tutorial_application_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{_tutorial_application_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}!main@{main}}
+\index{main@{main}!Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+References Base\+Application\+::go().
+
+
+\begin{DoxyCode}
+501                                  \{
+502     \hyperlink{class_basic_tutorial__00}{BasicTutorial\_00} app;
+503     app.\hyperlink{class_base_application_a8a14a65a29118dd75173aa68678a05e1}{go}();  
+504     \textcolor{keywordflow}{return} 0;
+505 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_tutorial_application_8cpp_a1bf2c695da5bfaa4bc465da5b204289c}\label{_tutorial_application_8cpp_a1bf2c695da5bfaa4bc465da5b204289c}} 
+\index{Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}!pengiun\+State@{pengiun\+State}}
+\index{pengiun\+State@{pengiun\+State}!Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}}
+\subsubsection{\texorpdfstring{pengiun\+State}{pengiunState}}
+{\footnotesize\ttfamily int pengiun\+State = 0}
+
+
+
+Referenced by Basic\+Tutorial\+\_\+00\+::frame\+Started().
+
+\mbox{\Hypertarget{_tutorial_application_8cpp_aa08a577393243b86dfd2a97e61443673}\label{_tutorial_application_8cpp_aa08a577393243b86dfd2a97e61443673}} 
+\index{Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}!PI@{PI}}
+\index{PI@{PI}!Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}}
+\subsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily const float PI = 3.\+141592654}
+
+
+
+Referenced by Basic\+Tutorial\+\_\+00\+::create\+Scene\+\_\+00().
+
+\mbox{\Hypertarget{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}\label{_tutorial_application_8cpp_a4feca29d7349adc765dcdf44d396d46a}} 
+\index{Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}!time\+\_\+step@{time\+\_\+step}}
+\index{time\+\_\+step@{time\+\_\+step}!Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}}
+\subsubsection{\texorpdfstring{time\+\_\+step}{time\_step}}
+{\footnotesize\ttfamily float time\+\_\+step = 0}
+
+
+
+Referenced by Basic\+Tutorial\+\_\+00\+::frame\+Started(), Basic\+Tutorial\+\_\+00\+::move\+\_\+down(), and Basic\+Tutorial\+\_\+00\+::move\+\_\+up().
+
+\mbox{\Hypertarget{_tutorial_application_8cpp_a99a5608017531b46cd3234d001ec1dcb}\label{_tutorial_application_8cpp_a99a5608017531b46cd3234d001ec1dcb}} 
+\index{Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}!zero\+\_\+flag@{zero\+\_\+flag}}
+\index{zero\+\_\+flag@{zero\+\_\+flag}!Tutorial\+Application.\+cpp@{Tutorial\+Application.\+cpp}}
+\subsubsection{\texorpdfstring{zero\+\_\+flag}{zero\_flag}}
+{\footnotesize\ttfamily bool zero\+\_\+flag = false}
+
+
+
+Referenced by Basic\+Tutorial\+\_\+00\+::frame\+Started(), and Basic\+Tutorial\+\_\+00\+::key\+Pressed().
+

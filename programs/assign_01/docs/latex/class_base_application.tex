@@ -1,0 +1,973 @@
+\hypertarget{class_base_application}{}\section{Base\+Application Class Reference}
+\label{class_base_application}\index{Base\+Application@{Base\+Application}}
+
+
+{\ttfamily \#include $<$Base\+Application.\+h$>$}
+
+Inheritance diagram for Base\+Application\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.382979cm]{class_base_application}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_base_application_a7c897f08816cc064568ae1ec71026719}{Base\+Application} (void)
+\item 
+virtual \hyperlink{class_base_application_a48e1966307d5ef8f6cbf8b6e980ad652}{$\sim$\+Base\+Application} (void)
+\item 
+virtual void \hyperlink{class_base_application_a8a14a65a29118dd75173aa68678a05e1}{go} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_base_application_a5853d0e148cb85b0297a6885e1d33a89}{setup} ()
+\item 
+virtual bool \hyperlink{class_base_application_a62ed46f90e9f82cc810997647a2c587e}{configure} (void)
+\item 
+virtual void \hyperlink{class_base_application_ad5bc9655041e1849a4c13f444a3712bd}{choose\+Scene\+Manager} (void)
+\item 
+virtual void \hyperlink{class_base_application_afa9d51527763cf9aee9cd4e1b1039d55}{create\+Camera} (void)
+\item 
+virtual void \hyperlink{class_base_application_aff6fd9ff1ff0978cc68f19dd65be4778}{create\+Frame\+Listener} (void)
+\item 
+virtual void \hyperlink{class_base_application_aa97beeb4059b17d0ec22eae33286ec2d}{create\+Scene} (void)=0
+\item 
+virtual void \hyperlink{class_base_application_a365146059b25391fe400f5fdb94f011e}{destroy\+Scene} (void)
+\item 
+virtual void \hyperlink{class_base_application_a1f8f6730cae6ec769d8730b1af48486e}{create\+Viewports} (void)
+\item 
+virtual void \hyperlink{class_base_application_ae27301702f1e5de64619a39b1929f1f9}{setup\+Resources} (void)
+\item 
+virtual void \hyperlink{class_base_application_a9b77972f0f747a61e1f8ceba2ad47641}{create\+Resource\+Listener} (void)
+\item 
+virtual void \hyperlink{class_base_application_aaeb764e637dd87601a81a80156659d88}{load\+Resources} (void)
+\item 
+virtual bool \hyperlink{class_base_application_a03912a0f38b38fede7f08a2571e8fc56}{frame\+Rendering\+Queued} (const Ogre\+::\+Frame\+Event \&evt)
+\item 
+virtual bool \hyperlink{class_base_application_acfa977f04e435f18018ece805c1277ec}{key\+Pressed} (const O\+I\+S\+::\+Key\+Event \&arg)
+\item 
+virtual bool \hyperlink{class_base_application_aba5c7c9dea7a0efc58b89310bae547e5}{key\+Released} (const O\+I\+S\+::\+Key\+Event \&arg)
+\item 
+virtual bool \hyperlink{class_base_application_a126e59cb246b061e51eb6ce06a2ee8f4}{mouse\+Moved} (const O\+I\+S\+::\+Mouse\+Event \&arg)
+\item 
+virtual bool \hyperlink{class_base_application_a9255dfc1eabefd11c474ec45a6622504}{mouse\+Pressed} (const O\+I\+S\+::\+Mouse\+Event \&arg, O\+I\+S\+::\+Mouse\+Button\+ID id)
+\item 
+virtual bool \hyperlink{class_base_application_aa102c5859c14c0690c749994a446b53d}{mouse\+Released} (const O\+I\+S\+::\+Mouse\+Event \&arg, O\+I\+S\+::\+Mouse\+Button\+ID id)
+\item 
+virtual void \hyperlink{class_base_application_afacf8a797588592ef0abbad593f10cfa}{window\+Resized} (Ogre\+::\+Render\+Window $\ast$rw)
+\item 
+virtual void \hyperlink{class_base_application_ae0e37ac54a31ff6e51d58c7654ad1b90}{window\+Closed} (Ogre\+::\+Render\+Window $\ast$rw)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ogre\+::\+Root $\ast$ \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{m\+Root}
+\item 
+Ogre\+::\+Camera $\ast$ \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{m\+Camera}
+\item 
+Ogre\+::\+Scene\+Manager $\ast$ \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{m\+Scene\+Mgr}
+\item 
+Ogre\+::\+Render\+Window $\ast$ \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{m\+Window}
+\item 
+Ogre\+::\+String \hyperlink{class_base_application_a765e0df01c141a16df3178ab4f17afe6}{m\+Resources\+Cfg}
+\item 
+Ogre\+::\+String \hyperlink{class_base_application_a04f2fe47fa164fd78d986dc0df70b7fb}{m\+Plugins\+Cfg}
+\item 
+Ogre\+Bites\+::\+Sdk\+Tray\+Manager $\ast$ \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{m\+Tray\+Mgr}
+\item 
+Ogre\+Bites\+::\+Sdk\+Camera\+Man $\ast$ \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{m\+Camera\+Man}
+\item 
+Ogre\+Bites\+::\+Params\+Panel $\ast$ \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{m\+Details\+Panel}
+\item 
+bool \hyperlink{class_base_application_ac7e861799862cb645f1d78b170aef80d}{m\+Cursor\+Was\+Visible}
+\item 
+bool \hyperlink{class_base_application_a755f26d3a9915aaf830750d877e39d86}{m\+Shut\+Down}
+\item 
+O\+I\+S\+::\+Input\+Manager $\ast$ \hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{m\+Input\+Manager}
+\item 
+O\+I\+S\+::\+Mouse $\ast$ \hyperlink{class_base_application_add9b97fbe64da2814d3af113bac58c43}{m\+Mouse}
+\item 
+O\+I\+S\+::\+Keyboard $\ast$ \hyperlink{class_base_application_a9d6e19cf50c47379fbaae55bff28079c}{m\+Keyboard}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_base_application_a7c897f08816cc064568ae1ec71026719}\label{class_base_application_a7c897f08816cc064568ae1ec71026719}} 
+\index{Base\+Application@{Base\+Application}!Base\+Application@{Base\+Application}}
+\index{Base\+Application@{Base\+Application}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{Base\+Application()}{BaseApplication()}}
+{\footnotesize\ttfamily Base\+Application\+::\+Base\+Application (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+21     : \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot}(0),
+22     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}(0),
+23     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}(0),
+24     \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}(0),
+25     \hyperlink{class_base_application_a765e0df01c141a16df3178ab4f17afe6}{mResourcesCfg}(Ogre::StringUtil::BLANK),
+26     \hyperlink{class_base_application_a04f2fe47fa164fd78d986dc0df70b7fb}{mPluginsCfg}(Ogre::StringUtil::BLANK),
+27     \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}(0),
+28     \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}(0),
+29     \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}(0),
+30     \hyperlink{class_base_application_ac7e861799862cb645f1d78b170aef80d}{mCursorWasVisible}(\textcolor{keyword}{true}),
+31     \hyperlink{class_base_application_a755f26d3a9915aaf830750d877e39d86}{mShutDown}(\textcolor{keyword}{false}),
+32     \hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager}(0),
+33     \hyperlink{class_base_application_add9b97fbe64da2814d3af113bac58c43}{mMouse}(0),
+34     \hyperlink{class_base_application_a9d6e19cf50c47379fbaae55bff28079c}{mKeyboard}(0)
+35 \{
+36 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a48e1966307d5ef8f6cbf8b6e980ad652}\label{class_base_application_a48e1966307d5ef8f6cbf8b6e980ad652}} 
+\index{Base\+Application@{Base\+Application}!````~Base\+Application@{$\sim$\+Base\+Application}}
+\index{````~Base\+Application@{$\sim$\+Base\+Application}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{$\sim$\+Base\+Application()}{~BaseApplication()}}
+{\footnotesize\ttfamily Base\+Application\+::$\sim$\+Base\+Application (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+References m\+Camera\+Man, m\+Root, m\+Tray\+Mgr, m\+Window, and window\+Closed().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{keywordflow}{if} (\hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}) \textcolor{keyword}{delete} \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr};
+42     \textcolor{keywordflow}{if} (\hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}) \textcolor{keyword}{delete} \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan};
+43 
+44     \textcolor{comment}{//Remove ourself as a Window listener}
+45     Ogre::WindowEventUtilities::removeWindowEventListener(\hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}, \textcolor{keyword}{this});
+46     \hyperlink{class_base_application_ae0e37ac54a31ff6e51d58c7654ad1b90}{windowClosed}(\hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow});
+47     \textcolor{keyword}{delete} \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot};
+48 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_application_ad5bc9655041e1849a4c13f444a3712bd}\label{class_base_application_ad5bc9655041e1849a4c13f444a3712bd}} 
+\index{Base\+Application@{Base\+Application}!choose\+Scene\+Manager@{choose\+Scene\+Manager}}
+\index{choose\+Scene\+Manager@{choose\+Scene\+Manager}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{choose\+Scene\+Manager()}{chooseSceneManager()}}
+{\footnotesize\ttfamily void Base\+Application\+::choose\+Scene\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_basic_tutorial__00_aba97a29d983586d2dc8e108d3bccf721}{Basic\+Tutorial\+\_\+00}.
+
+
+
+References m\+Root, and m\+Scene\+Mgr.
+
+
+
+Referenced by setup().
+
+
+\begin{DoxyCode}
+71 \{
+72     \textcolor{comment}{// Get the SceneManager, in this case a generic one}
+73     \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr} = \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot}->createSceneManager(Ogre::ST\_GENERIC);
+74 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a62ed46f90e9f82cc810997647a2c587e}\label{class_base_application_a62ed46f90e9f82cc810997647a2c587e}} 
+\index{Base\+Application@{Base\+Application}!configure@{configure}}
+\index{configure@{configure}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily bool Base\+Application\+::configure (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Root, and m\+Window.
+
+
+
+Referenced by setup().
+
+
+\begin{DoxyCode}
+52 \{
+53     \textcolor{comment}{// Show the configuration dialog and initialise the system}
+54     \textcolor{comment}{// You can skip this and use root.restoreConfig() to load configuration}
+55     \textcolor{comment}{// settings if you were sure there are valid ones saved in ogre.cfg}
+56     \textcolor{keywordflow}{if}(\hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot}->showConfigDialog())
+57     \{
+58         \textcolor{comment}{// If returned true, user clicked OK so initialise}
+59         \textcolor{comment}{// Here we choose to let the system create a default rendering window by passing 'true'}
+60         \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow} = \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot}->initialise(\textcolor{keyword}{true}, \textcolor{stringliteral}{"NCTU. 3D Game Programming. Student Name: Â²¥ß­õ.
+       ID:0316235"});
+61 
+62         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+63     \}
+64     \textcolor{keywordflow}{else}
+65     \{
+66         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+67     \}
+68 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_afa9d51527763cf9aee9cd4e1b1039d55}\label{class_base_application_afa9d51527763cf9aee9cd4e1b1039d55}} 
+\index{Base\+Application@{Base\+Application}!create\+Camera@{create\+Camera}}
+\index{create\+Camera@{create\+Camera}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{create\+Camera()}{createCamera()}}
+{\footnotesize\ttfamily void Base\+Application\+::create\+Camera (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_basic_tutorial__00_a1bf709417d654dffc2ea10987412b912}{Basic\+Tutorial\+\_\+00}.
+
+
+
+References m\+Camera, m\+Camera\+Man, and m\+Scene\+Mgr.
+
+
+
+Referenced by setup().
+
+
+\begin{DoxyCode}
+77 \{
+78     \textcolor{comment}{// Create the camera}
+79     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera} = \hyperlink{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}{mSceneMgr}->createCamera(\textcolor{stringliteral}{"PlayerCam"});
+80 
+81     \textcolor{comment}{/*}
+82 \textcolor{comment}{    // Position it at 500 in Z direction}
+83 \textcolor{comment}{    mCamera->setPosition(Ogre::Vector3(0,0,80));}
+84 \textcolor{comment}{    // Look back along -Z}
+85 \textcolor{comment}{    mCamera->lookAt(Ogre::Vector3(0,0,-300));}
+86 \textcolor{comment}{    */}
+87 
+88     
+89     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setPosition(Ogre::Vector3(0,80,1000));
+90     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->lookAt(Ogre::Vector3(0,0,0));
+91 
+92     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setNearClipDistance(5);
+93 
+94     \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan} = \textcolor{keyword}{new} OgreBites::SdkCameraMan(\hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera});   \textcolor{comment}{// create a default camera
+       controller}
+95 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_aff6fd9ff1ff0978cc68f19dd65be4778}\label{class_base_application_aff6fd9ff1ff0978cc68f19dd65be4778}} 
+\index{Base\+Application@{Base\+Application}!create\+Frame\+Listener@{create\+Frame\+Listener}}
+\index{create\+Frame\+Listener@{create\+Frame\+Listener}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{create\+Frame\+Listener()}{createFrameListener()}}
+{\footnotesize\ttfamily void Base\+Application\+::create\+Frame\+Listener (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Details\+Panel, m\+Input\+Manager, m\+Keyboard, m\+Mouse, m\+Root, m\+Tray\+Mgr, m\+Window, and window\+Resized().
+
+
+
+Referenced by setup().
+
+
+\begin{DoxyCode}
+98 \{
+99     Ogre::LogManager::getSingletonPtr()->logMessage(\textcolor{stringliteral}{"*** Initializing OIS ***"});
+100     OIS::ParamList pl;
+101     \textcolor{keywordtype}{size\_t} windowHnd = 0;
+102     std::ostringstream windowHndStr;
+103 
+104     \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->getCustomAttribute(\textcolor{stringliteral}{"WINDOW"}, &windowHnd);
+105     windowHndStr << windowHnd;
+106     pl.insert(std::make\_pair(std::string(\textcolor{stringliteral}{"WINDOW"}), windowHndStr.str()));
+107 
+108     \hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager} = OIS::InputManager::createInputSystem( pl );
+109 
+110     \hyperlink{class_base_application_a9d6e19cf50c47379fbaae55bff28079c}{mKeyboard} = \textcolor{keyword}{static\_cast<}OIS::Keyboard*\textcolor{keyword}{>}(\hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager}->createInputObject( 
+      OIS::OISKeyboard, \textcolor{keyword}{true} ));
+111     \hyperlink{class_base_application_add9b97fbe64da2814d3af113bac58c43}{mMouse} = \textcolor{keyword}{static\_cast<}OIS::Mouse*\textcolor{keyword}{>}(\hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager}->createInputObject( OIS::OISMouse, \textcolor{keyword}{
+      true} ));
+112 
+113     \hyperlink{class_base_application_add9b97fbe64da2814d3af113bac58c43}{mMouse}->setEventCallback(\textcolor{keyword}{this});
+114     \hyperlink{class_base_application_a9d6e19cf50c47379fbaae55bff28079c}{mKeyboard}->setEventCallback(\textcolor{keyword}{this});
+115 
+116     \textcolor{comment}{//Set initial mouse clipping size}
+117     \hyperlink{class_base_application_afacf8a797588592ef0abbad593f10cfa}{windowResized}(\hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow});
+118 
+119     \textcolor{comment}{//Register as a Window listener}
+120     Ogre::WindowEventUtilities::addWindowEventListener(\hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}, \textcolor{keyword}{this});
+121 
+122     \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr} = \textcolor{keyword}{new} OgreBites::SdkTrayManager(\textcolor{stringliteral}{"InterfaceName"}, \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}, 
+      \hyperlink{class_base_application_add9b97fbe64da2814d3af113bac58c43}{mMouse}, \textcolor{keyword}{this});
+123     \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->showFrameStats(OgreBites::TL\_BOTTOMLEFT);
+124     \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->showLogo(OgreBites::TL\_BOTTOMRIGHT);
+125     \textcolor{comment}{//mTrayMgr->hideCursor();}
+126     \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->showCursor();
+127 
+128     \textcolor{comment}{// create a params panel for displaying sample details}
+129     Ogre::StringVector items;
+130     items.push\_back(\textcolor{stringliteral}{"cam.pX"});
+131     items.push\_back(\textcolor{stringliteral}{"cam.pY"});
+132     items.push\_back(\textcolor{stringliteral}{"cam.pZ"});
+133     items.push\_back(\textcolor{stringliteral}{""});
+134     items.push\_back(\textcolor{stringliteral}{"cam.oW"});
+135     items.push\_back(\textcolor{stringliteral}{"cam.oX"});
+136     items.push\_back(\textcolor{stringliteral}{"cam.oY"});
+137     items.push\_back(\textcolor{stringliteral}{"cam.oZ"});
+138     items.push\_back(\textcolor{stringliteral}{""});
+139     items.push\_back(\textcolor{stringliteral}{"Filtering"});
+140     items.push\_back(\textcolor{stringliteral}{"Poly Mode"});
+141 
+142     \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel} = \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->createParamsPanel(OgreBites::TL\_NONE, \textcolor{stringliteral}{"DetailsPanel"}, 20
+      0, items);
+143     \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(9, \textcolor{stringliteral}{"Bilinear"});
+144     \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(10, \textcolor{stringliteral}{"Solid"});
+145     \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->hide();
+146 
+147     \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot}->addFrameListener(\textcolor{keyword}{this});
+148 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a9b77972f0f747a61e1f8ceba2ad47641}\label{class_base_application_a9b77972f0f747a61e1f8ceba2ad47641}} 
+\index{Base\+Application@{Base\+Application}!create\+Resource\+Listener@{create\+Resource\+Listener}}
+\index{create\+Resource\+Listener@{create\+Resource\+Listener}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{create\+Resource\+Listener()}{createResourceListener()}}
+{\footnotesize\ttfamily void Base\+Application\+::create\+Resource\+Listener (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Referenced by setup().
+
+
+\begin{DoxyCode}
+191 \{
+192 
+193 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_aa97beeb4059b17d0ec22eae33286ec2d}\label{class_base_application_aa97beeb4059b17d0ec22eae33286ec2d}} 
+\index{Base\+Application@{Base\+Application}!create\+Scene@{create\+Scene}}
+\index{create\+Scene@{create\+Scene}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{create\+Scene()}{createScene()}}
+{\footnotesize\ttfamily virtual void Base\+Application\+::create\+Scene (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_basic_tutorial__00_a15a3d4673724ec99077ce992f996a550}{Basic\+Tutorial\+\_\+00}.
+
+
+
+Referenced by setup().
+
+\mbox{\Hypertarget{class_base_application_a1f8f6730cae6ec769d8730b1af48486e}\label{class_base_application_a1f8f6730cae6ec769d8730b1af48486e}} 
+\index{Base\+Application@{Base\+Application}!create\+Viewports@{create\+Viewports}}
+\index{create\+Viewports@{create\+Viewports}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{create\+Viewports()}{createViewports()}}
+{\footnotesize\ttfamily void Base\+Application\+::create\+Viewports (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_basic_tutorial__00_adc2454d9f8226e0958ecf702f355846e}{Basic\+Tutorial\+\_\+00}.
+
+
+
+References m\+Camera, and m\+Window.
+
+
+
+Referenced by setup().
+
+
+\begin{DoxyCode}
+155 \{
+156     \textcolor{comment}{// Create one viewport, entire window}
+157     Ogre::Viewport* vp = \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->addViewport(\hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera});
+158     vp->setBackgroundColour(Ogre::ColourValue(0,0,0));
+159 
+160     \textcolor{comment}{// Alter the camera aspect ratio to match the viewport}
+161     \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setAspectRatio(
+162         Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
+163 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a365146059b25391fe400f5fdb94f011e}\label{class_base_application_a365146059b25391fe400f5fdb94f011e}} 
+\index{Base\+Application@{Base\+Application}!destroy\+Scene@{destroy\+Scene}}
+\index{destroy\+Scene@{destroy\+Scene}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{destroy\+Scene()}{destroyScene()}}
+{\footnotesize\ttfamily void Base\+Application\+::destroy\+Scene (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Referenced by go().
+
+
+\begin{DoxyCode}
+151 \{
+152 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a03912a0f38b38fede7f08a2571e8fc56}\label{class_base_application_a03912a0f38b38fede7f08a2571e8fc56}} 
+\index{Base\+Application@{Base\+Application}!frame\+Rendering\+Queued@{frame\+Rendering\+Queued}}
+\index{frame\+Rendering\+Queued@{frame\+Rendering\+Queued}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{frame\+Rendering\+Queued()}{frameRenderingQueued()}}
+{\footnotesize\ttfamily bool Base\+Application\+::frame\+Rendering\+Queued (\begin{DoxyParamCaption}\item[{const Ogre\+::\+Frame\+Event \&}]{evt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Camera, m\+Camera\+Man, m\+Details\+Panel, m\+Keyboard, m\+Mouse, m\+Shut\+Down, m\+Tray\+Mgr, and m\+Window.
+
+
+\begin{DoxyCode}
+249 \{
+250     \textcolor{keywordflow}{if}(\hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->isClosed())
+251         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+252 
+253     \textcolor{keywordflow}{if}(\hyperlink{class_base_application_a755f26d3a9915aaf830750d877e39d86}{mShutDown})
+254         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+255 
+256     \textcolor{comment}{//Need to capture/update each device}
+257     \hyperlink{class_base_application_a9d6e19cf50c47379fbaae55bff28079c}{mKeyboard}->capture();
+258     \hyperlink{class_base_application_add9b97fbe64da2814d3af113bac58c43}{mMouse}->capture();
+259 
+260     \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->frameRenderingQueued(evt);
+261 
+262     \textcolor{keywordflow}{if} (!\hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->isDialogVisible())
+263     \{
+264         \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->frameRenderingQueued(evt);   \textcolor{comment}{// if dialog isn't up, then update the camera}
+265         \textcolor{keywordflow}{if} (\hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->isVisible())   \textcolor{comment}{// if details panel is visible, then update its
+       contents}
+266         \{
+267             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(0, Ogre::StringConverter::toString(
+      \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->getDerivedPosition().x));
+268             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(1, Ogre::StringConverter::toString(
+      \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->getDerivedPosition().y));
+269             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(2, Ogre::StringConverter::toString(
+      \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->getDerivedPosition().z));
+270             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(4, Ogre::StringConverter::toString(
+      \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->getDerivedOrientation().w));
+271             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(5, Ogre::StringConverter::toString(
+      \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->getDerivedOrientation().x));
+272             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(6, Ogre::StringConverter::toString(
+      \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->getDerivedOrientation().y));
+273             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(7, Ogre::StringConverter::toString(
+      \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->getDerivedOrientation().z));
+274         \}
+275     \}
+276 
+277     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+278 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a8a14a65a29118dd75173aa68678a05e1}\label{class_base_application_a8a14a65a29118dd75173aa68678a05e1}} 
+\index{Base\+Application@{Base\+Application}!go@{go}}
+\index{go@{go}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{go()}{go()}}
+{\footnotesize\ttfamily void Base\+Application\+::go (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+References destroy\+Scene(), m\+Plugins\+Cfg, m\+Resources\+Cfg, m\+Root, and setup().
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+201 \{
+202 \textcolor{preprocessor}{#ifdef \_DEBUG}
+203     \hyperlink{class_base_application_a765e0df01c141a16df3178ab4f17afe6}{mResourcesCfg} = \textcolor{stringliteral}{"resources\_d.cfg"};
+204     \hyperlink{class_base_application_a04f2fe47fa164fd78d986dc0df70b7fb}{mPluginsCfg} = \textcolor{stringliteral}{"plugins\_d.cfg"};
+205 \textcolor{preprocessor}{#else}
+206     \hyperlink{class_base_application_a765e0df01c141a16df3178ab4f17afe6}{mResourcesCfg} = \textcolor{stringliteral}{"resources.cfg"};
+207     \hyperlink{class_base_application_a04f2fe47fa164fd78d986dc0df70b7fb}{mPluginsCfg} = \textcolor{stringliteral}{"plugins.cfg"};
+208 \textcolor{preprocessor}{#endif}
+209 
+210     \textcolor{keywordflow}{if} (!\hyperlink{class_base_application_a5853d0e148cb85b0297a6885e1d33a89}{setup}())
+211         \textcolor{keywordflow}{return};
+212 
+213     \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot}->startRendering();
+214 
+215     \textcolor{comment}{// clean up}
+216     \hyperlink{class_base_application_a365146059b25391fe400f5fdb94f011e}{destroyScene}();
+217 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_acfa977f04e435f18018ece805c1277ec}\label{class_base_application_acfa977f04e435f18018ece805c1277ec}} 
+\index{Base\+Application@{Base\+Application}!key\+Pressed@{key\+Pressed}}
+\index{key\+Pressed@{key\+Pressed}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{key\+Pressed()}{keyPressed()}}
+{\footnotesize\ttfamily bool Base\+Application\+::key\+Pressed (\begin{DoxyParamCaption}\item[{const O\+I\+S\+::\+Key\+Event \&}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_basic_tutorial__00_adc1a0b32d78b1980b3ee51a1b1e1e69b}{Basic\+Tutorial\+\_\+00}.
+
+
+
+References m\+Camera, m\+Camera\+Man, m\+Details\+Panel, m\+Shut\+Down, m\+Tray\+Mgr, and m\+Window.
+
+
+
+Referenced by Basic\+Tutorial\+\_\+00\+::key\+Pressed().
+
+
+\begin{DoxyCode}
+281 \{
+282     \textcolor{keywordflow}{if} (\hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->isDialogVisible()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};   \textcolor{comment}{// don't process any more keys if dialog is up}
+283 
+284     \textcolor{keywordflow}{if} (arg.key == OIS::KC\_F)   \textcolor{comment}{// toggle visibility of advanced frame stats}
+285     \{
+286         \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->toggleAdvancedFrameStats();
+287     \}
+288     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (arg.key == OIS::KC\_G)   \textcolor{comment}{// toggle visibility of even rarer debugging details}
+289     \{
+290         \textcolor{keywordflow}{if} (\hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->getTrayLocation() == OgreBites::TL\_NONE)
+291         \{
+292             \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->moveWidgetToTray(\hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}, OgreBites::TL\_TOPRIGHT, 0);
+293             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->show();
+294         \}
+295         \textcolor{keywordflow}{else}
+296         \{
+297             \hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->removeWidgetFromTray(\hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel});
+298             \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->hide();
+299         \}
+300     \}
+301     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (arg.key == OIS::KC\_T)   \textcolor{comment}{// cycle polygon rendering mode}
+302     \{
+303         Ogre::String newVal;
+304         Ogre::TextureFilterOptions tfo;
+305         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} aniso;
+306 
+307         \textcolor{keywordflow}{switch} (\hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->getParamValue(9).asUTF8()[0])
+308         \{
+309         \textcolor{keywordflow}{case} \textcolor{charliteral}{'B'}:
+310             newVal = \textcolor{stringliteral}{"Trilinear"};
+311             tfo = Ogre::TFO\_TRILINEAR;
+312             aniso = 1;
+313             \textcolor{keywordflow}{break};
+314         \textcolor{keywordflow}{case} \textcolor{charliteral}{'T'}:
+315             newVal = \textcolor{stringliteral}{"Anisotropic"};
+316             tfo = Ogre::TFO\_ANISOTROPIC;
+317             aniso = 8;
+318             \textcolor{keywordflow}{break};
+319         \textcolor{keywordflow}{case} \textcolor{charliteral}{'A'}:
+320             newVal = \textcolor{stringliteral}{"None"};
+321             tfo = Ogre::TFO\_NONE;
+322             aniso = 1;
+323             \textcolor{keywordflow}{break};
+324         \textcolor{keywordflow}{default}:
+325             newVal = \textcolor{stringliteral}{"Bilinear"};
+326             tfo = Ogre::TFO\_BILINEAR;
+327             aniso = 1;
+328         \}
+329 
+330         Ogre::MaterialManager::getSingleton().setDefaultTextureFiltering(tfo);
+331         Ogre::MaterialManager::getSingleton().setDefaultAnisotropy(aniso);
+332         \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(9, newVal);
+333     \}
+334     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (arg.key == OIS::KC\_R)   \textcolor{comment}{// cycle polygon rendering mode}
+335     \{
+336         Ogre::String newVal;
+337         Ogre::PolygonMode pm;
+338 
+339         \textcolor{keywordflow}{switch} (\hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->getPolygonMode())
+340         \{
+341         \textcolor{keywordflow}{case} Ogre::PM\_SOLID:
+342             newVal = \textcolor{stringliteral}{"Wireframe"};
+343             pm = Ogre::PM\_WIREFRAME;
+344             \textcolor{keywordflow}{break};
+345         \textcolor{keywordflow}{case} Ogre::PM\_WIREFRAME:
+346             newVal = \textcolor{stringliteral}{"Points"};
+347             pm = Ogre::PM\_POINTS;
+348             \textcolor{keywordflow}{break};
+349         \textcolor{keywordflow}{default}:
+350             newVal = \textcolor{stringliteral}{"Solid"};
+351             pm = Ogre::PM\_SOLID;
+352         \}
+353 
+354         \hyperlink{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}{mCamera}->setPolygonMode(pm);
+355         \hyperlink{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}{mDetailsPanel}->setParamValue(10, newVal);
+356     \}
+357     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(arg.key == OIS::KC\_F5)   \textcolor{comment}{// refresh all textures}
+358     \{
+359         Ogre::TextureManager::getSingleton().reloadAll();
+360     \}
+361     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (arg.key == OIS::KC\_SYSRQ)   \textcolor{comment}{// take a screenshot}
+362     \{
+363         \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow}->writeContentsToTimestampedFile(\textcolor{stringliteral}{"screenshot"}, \textcolor{stringliteral}{".jpg"});
+364     \}
+365     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (arg.key == OIS::KC\_ESCAPE)
+366     \{
+367         \hyperlink{class_base_application_a755f26d3a9915aaf830750d877e39d86}{mShutDown} = \textcolor{keyword}{true};
+368     \}
+369 
+370     \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->injectKeyDown(arg);
+371     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+372 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_aba5c7c9dea7a0efc58b89310bae547e5}\label{class_base_application_aba5c7c9dea7a0efc58b89310bae547e5}} 
+\index{Base\+Application@{Base\+Application}!key\+Released@{key\+Released}}
+\index{key\+Released@{key\+Released}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{key\+Released()}{keyReleased()}}
+{\footnotesize\ttfamily bool Base\+Application\+::key\+Released (\begin{DoxyParamCaption}\item[{const O\+I\+S\+::\+Key\+Event \&}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_basic_tutorial__00_aacca7a0a2a5a0e0d007b9c6c30b4941b}{Basic\+Tutorial\+\_\+00}.
+
+
+
+References m\+Camera\+Man.
+
+
+
+Referenced by Basic\+Tutorial\+\_\+00\+::key\+Released().
+
+
+\begin{DoxyCode}
+375 \{
+376     \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->injectKeyUp(arg);
+377     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+378 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_aaeb764e637dd87601a81a80156659d88}\label{class_base_application_aaeb764e637dd87601a81a80156659d88}} 
+\index{Base\+Application@{Base\+Application}!load\+Resources@{load\+Resources}}
+\index{load\+Resources@{load\+Resources}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{load\+Resources()}{loadResources()}}
+{\footnotesize\ttfamily void Base\+Application\+::load\+Resources (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Referenced by setup().
+
+
+\begin{DoxyCode}
+196 \{
+197     Ogre::ResourceGroupManager::getSingleton().initialiseAllResourceGroups();
+198 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a126e59cb246b061e51eb6ce06a2ee8f4}\label{class_base_application_a126e59cb246b061e51eb6ce06a2ee8f4}} 
+\index{Base\+Application@{Base\+Application}!mouse\+Moved@{mouse\+Moved}}
+\index{mouse\+Moved@{mouse\+Moved}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{mouse\+Moved()}{mouseMoved()}}
+{\footnotesize\ttfamily bool Base\+Application\+::mouse\+Moved (\begin{DoxyParamCaption}\item[{const O\+I\+S\+::\+Mouse\+Event \&}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Camera\+Man, and m\+Tray\+Mgr.
+
+
+\begin{DoxyCode}
+381 \{
+382     \textcolor{keywordflow}{if} (\hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->injectMouseMove(arg)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+383     \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->injectMouseMove(arg);
+384     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+385 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a9255dfc1eabefd11c474ec45a6622504}\label{class_base_application_a9255dfc1eabefd11c474ec45a6622504}} 
+\index{Base\+Application@{Base\+Application}!mouse\+Pressed@{mouse\+Pressed}}
+\index{mouse\+Pressed@{mouse\+Pressed}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{mouse\+Pressed()}{mousePressed()}}
+{\footnotesize\ttfamily bool Base\+Application\+::mouse\+Pressed (\begin{DoxyParamCaption}\item[{const O\+I\+S\+::\+Mouse\+Event \&}]{arg,  }\item[{O\+I\+S\+::\+Mouse\+Button\+ID}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Camera\+Man, and m\+Tray\+Mgr.
+
+
+\begin{DoxyCode}
+388 \{
+389     \textcolor{keywordflow}{if} (\hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->injectMouseDown(arg, \textcolor{keywordtype}{id})) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+390     \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->injectMouseDown(arg, \textcolor{keywordtype}{id});
+391     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+392 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_aa102c5859c14c0690c749994a446b53d}\label{class_base_application_aa102c5859c14c0690c749994a446b53d}} 
+\index{Base\+Application@{Base\+Application}!mouse\+Released@{mouse\+Released}}
+\index{mouse\+Released@{mouse\+Released}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{mouse\+Released()}{mouseReleased()}}
+{\footnotesize\ttfamily bool Base\+Application\+::mouse\+Released (\begin{DoxyParamCaption}\item[{const O\+I\+S\+::\+Mouse\+Event \&}]{arg,  }\item[{O\+I\+S\+::\+Mouse\+Button\+ID}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Camera\+Man, and m\+Tray\+Mgr.
+
+
+\begin{DoxyCode}
+395 \{
+396     \textcolor{keywordflow}{if} (\hyperlink{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}{mTrayMgr}->injectMouseUp(arg, \textcolor{keywordtype}{id})) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+397     \hyperlink{class_base_application_a9ae38dea6316058549151fff66a91fcd}{mCameraMan}->injectMouseUp(arg, \textcolor{keywordtype}{id});
+398     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+399 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_a5853d0e148cb85b0297a6885e1d33a89}\label{class_base_application_a5853d0e148cb85b0297a6885e1d33a89}} 
+\index{Base\+Application@{Base\+Application}!setup@{setup}}
+\index{setup@{setup}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily bool Base\+Application\+::setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References choose\+Scene\+Manager(), configure(), create\+Camera(), create\+Frame\+Listener(), create\+Resource\+Listener(), create\+Scene(), create\+Viewports(), load\+Resources(), m\+Plugins\+Cfg, m\+Root, and setup\+Resources().
+
+
+
+Referenced by go().
+
+
+\begin{DoxyCode}
+220 \{
+221     \hyperlink{class_base_application_add84ba707dc6c57e6283f214b1274110}{mRoot} = \textcolor{keyword}{new} Ogre::Root(\hyperlink{class_base_application_a04f2fe47fa164fd78d986dc0df70b7fb}{mPluginsCfg});
+222 
+223     \hyperlink{class_base_application_ae27301702f1e5de64619a39b1929f1f9}{setupResources}();
+224 
+225     \textcolor{keywordtype}{bool} carryOn = \hyperlink{class_base_application_a62ed46f90e9f82cc810997647a2c587e}{configure}();
+226     \textcolor{keywordflow}{if} (!carryOn) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+227 
+228     \hyperlink{class_base_application_ad5bc9655041e1849a4c13f444a3712bd}{chooseSceneManager}();
+229     \hyperlink{class_base_application_afa9d51527763cf9aee9cd4e1b1039d55}{createCamera}();
+230     \hyperlink{class_base_application_a1f8f6730cae6ec769d8730b1af48486e}{createViewports}();
+231 
+232     \textcolor{comment}{// Set default mipmap level (NB some APIs ignore this)}
+233     Ogre::TextureManager::getSingleton().setDefaultNumMipmaps(5);
+234 
+235     \textcolor{comment}{// Create any resource listeners (for loading screens)}
+236     \hyperlink{class_base_application_a9b77972f0f747a61e1f8ceba2ad47641}{createResourceListener}();
+237     \textcolor{comment}{// Load resources}
+238     \hyperlink{class_base_application_aaeb764e637dd87601a81a80156659d88}{loadResources}();
+239 
+240     \textcolor{comment}{// Create the scene}
+241     \hyperlink{class_base_application_aa97beeb4059b17d0ec22eae33286ec2d}{createScene}();
+242 
+243     \hyperlink{class_base_application_aff6fd9ff1ff0978cc68f19dd65be4778}{createFrameListener}();
+244 
+245     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+246 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_ae27301702f1e5de64619a39b1929f1f9}\label{class_base_application_ae27301702f1e5de64619a39b1929f1f9}} 
+\index{Base\+Application@{Base\+Application}!setup\+Resources@{setup\+Resources}}
+\index{setup\+Resources@{setup\+Resources}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{setup\+Resources()}{setupResources()}}
+{\footnotesize\ttfamily void Base\+Application\+::setup\+Resources (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Resources\+Cfg.
+
+
+
+Referenced by setup().
+
+
+\begin{DoxyCode}
+166 \{
+167     \textcolor{comment}{// Load resource paths from config file}
+168     Ogre::ConfigFile cf;
+169     cf.load(\hyperlink{class_base_application_a765e0df01c141a16df3178ab4f17afe6}{mResourcesCfg});
+170 
+171     \textcolor{comment}{// Go through all sections & settings in the file}
+172     Ogre::ConfigFile::SectionIterator seci = cf.getSectionIterator();
+173 
+174     Ogre::String secName, typeName, archName;
+175     \textcolor{keywordflow}{while} (seci.hasMoreElements())
+176     \{
+177         secName = seci.peekNextKey();
+178         Ogre::ConfigFile::SettingsMultiMap *settings = seci.getNext();
+179         Ogre::ConfigFile::SettingsMultiMap::iterator i;
+180         \textcolor{keywordflow}{for} (i = settings->begin(); i != settings->end(); ++i)
+181         \{
+182             typeName = i->first;
+183             archName = i->second;
+184             Ogre::ResourceGroupManager::getSingleton().addResourceLocation(
+185                 archName, typeName, secName);
+186         \}
+187     \}
+188 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_ae0e37ac54a31ff6e51d58c7654ad1b90}\label{class_base_application_ae0e37ac54a31ff6e51d58c7654ad1b90}} 
+\index{Base\+Application@{Base\+Application}!window\+Closed@{window\+Closed}}
+\index{window\+Closed@{window\+Closed}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{window\+Closed()}{windowClosed()}}
+{\footnotesize\ttfamily void Base\+Application\+::window\+Closed (\begin{DoxyParamCaption}\item[{Ogre\+::\+Render\+Window $\ast$}]{rw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Input\+Manager, m\+Keyboard, m\+Mouse, and m\+Window.
+
+
+
+Referenced by $\sim$\+Base\+Application().
+
+
+\begin{DoxyCode}
+415 \{
+416     \textcolor{comment}{//Only close for window that created OIS (the main window in these demos)}
+417     \textcolor{keywordflow}{if}( rw == \hyperlink{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}{mWindow} )
+418     \{
+419         \textcolor{keywordflow}{if}( \hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager} )
+420         \{
+421             \hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager}->destroyInputObject( \hyperlink{class_base_application_add9b97fbe64da2814d3af113bac58c43}{mMouse} );
+422             \hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager}->destroyInputObject( \hyperlink{class_base_application_a9d6e19cf50c47379fbaae55bff28079c}{mKeyboard} );
+423 
+424             OIS::InputManager::destroyInputSystem(\hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager});
+425             \hyperlink{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}{mInputManager} = 0;
+426         \}
+427     \}
+428 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_application_afacf8a797588592ef0abbad593f10cfa}\label{class_base_application_afacf8a797588592ef0abbad593f10cfa}} 
+\index{Base\+Application@{Base\+Application}!window\+Resized@{window\+Resized}}
+\index{window\+Resized@{window\+Resized}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{window\+Resized()}{windowResized()}}
+{\footnotesize\ttfamily void Base\+Application\+::window\+Resized (\begin{DoxyParamCaption}\item[{Ogre\+::\+Render\+Window $\ast$}]{rw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+References m\+Mouse.
+
+
+
+Referenced by create\+Frame\+Listener().
+
+
+\begin{DoxyCode}
+403 \{
+404     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, height, depth;
+405     \textcolor{keywordtype}{int} left, top;
+406     rw->getMetrics(width, height, depth, left, top);
+407 
+408     \textcolor{keyword}{const} OIS::MouseState &ms = \hyperlink{class_base_application_add9b97fbe64da2814d3af113bac58c43}{mMouse}->getMouseState();
+409     ms.width = width;
+410     ms.height = height;
+411 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}\label{class_base_application_a3829c6b12afe911e97e6b4524b33a38b}} 
+\index{Base\+Application@{Base\+Application}!m\+Camera@{m\+Camera}}
+\index{m\+Camera@{m\+Camera}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Camera}{mCamera}}
+{\footnotesize\ttfamily Ogre\+::\+Camera$\ast$ Base\+Application\+::m\+Camera\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by create\+Camera(), create\+Viewports(), frame\+Rendering\+Queued(), and key\+Pressed().
+
+\mbox{\Hypertarget{class_base_application_a9ae38dea6316058549151fff66a91fcd}\label{class_base_application_a9ae38dea6316058549151fff66a91fcd}} 
+\index{Base\+Application@{Base\+Application}!m\+Camera\+Man@{m\+Camera\+Man}}
+\index{m\+Camera\+Man@{m\+Camera\+Man}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Camera\+Man}{mCameraMan}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Sdk\+Camera\+Man$\ast$ Base\+Application\+::m\+Camera\+Man\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by create\+Camera(), frame\+Rendering\+Queued(), key\+Pressed(), key\+Released(), mouse\+Moved(), mouse\+Pressed(), mouse\+Released(), and $\sim$\+Base\+Application().
+
+\mbox{\Hypertarget{class_base_application_ac7e861799862cb645f1d78b170aef80d}\label{class_base_application_ac7e861799862cb645f1d78b170aef80d}} 
+\index{Base\+Application@{Base\+Application}!m\+Cursor\+Was\+Visible@{m\+Cursor\+Was\+Visible}}
+\index{m\+Cursor\+Was\+Visible@{m\+Cursor\+Was\+Visible}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Cursor\+Was\+Visible}{mCursorWasVisible}}
+{\footnotesize\ttfamily bool Base\+Application\+::m\+Cursor\+Was\+Visible\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}\label{class_base_application_a6a11054ca61efdf558e0ff1b2de43a12}} 
+\index{Base\+Application@{Base\+Application}!m\+Details\+Panel@{m\+Details\+Panel}}
+\index{m\+Details\+Panel@{m\+Details\+Panel}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Details\+Panel}{mDetailsPanel}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Params\+Panel$\ast$ Base\+Application\+::m\+Details\+Panel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by create\+Frame\+Listener(), frame\+Rendering\+Queued(), and key\+Pressed().
+
+\mbox{\Hypertarget{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}\label{class_base_application_abc9503c8462e225b5d0d55c952d9e4a9}} 
+\index{Base\+Application@{Base\+Application}!m\+Input\+Manager@{m\+Input\+Manager}}
+\index{m\+Input\+Manager@{m\+Input\+Manager}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Input\+Manager}{mInputManager}}
+{\footnotesize\ttfamily O\+I\+S\+::\+Input\+Manager$\ast$ Base\+Application\+::m\+Input\+Manager\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by create\+Frame\+Listener(), and window\+Closed().
+
+\mbox{\Hypertarget{class_base_application_a9d6e19cf50c47379fbaae55bff28079c}\label{class_base_application_a9d6e19cf50c47379fbaae55bff28079c}} 
+\index{Base\+Application@{Base\+Application}!m\+Keyboard@{m\+Keyboard}}
+\index{m\+Keyboard@{m\+Keyboard}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Keyboard}{mKeyboard}}
+{\footnotesize\ttfamily O\+I\+S\+::\+Keyboard$\ast$ Base\+Application\+::m\+Keyboard\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by create\+Frame\+Listener(), frame\+Rendering\+Queued(), and window\+Closed().
+
+\mbox{\Hypertarget{class_base_application_add9b97fbe64da2814d3af113bac58c43}\label{class_base_application_add9b97fbe64da2814d3af113bac58c43}} 
+\index{Base\+Application@{Base\+Application}!m\+Mouse@{m\+Mouse}}
+\index{m\+Mouse@{m\+Mouse}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Mouse}{mMouse}}
+{\footnotesize\ttfamily O\+I\+S\+::\+Mouse$\ast$ Base\+Application\+::m\+Mouse\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by create\+Frame\+Listener(), frame\+Rendering\+Queued(), window\+Closed(), and window\+Resized().
+
+\mbox{\Hypertarget{class_base_application_a04f2fe47fa164fd78d986dc0df70b7fb}\label{class_base_application_a04f2fe47fa164fd78d986dc0df70b7fb}} 
+\index{Base\+Application@{Base\+Application}!m\+Plugins\+Cfg@{m\+Plugins\+Cfg}}
+\index{m\+Plugins\+Cfg@{m\+Plugins\+Cfg}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Plugins\+Cfg}{mPluginsCfg}}
+{\footnotesize\ttfamily Ogre\+::\+String Base\+Application\+::m\+Plugins\+Cfg\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by go(), and setup().
+
+\mbox{\Hypertarget{class_base_application_a765e0df01c141a16df3178ab4f17afe6}\label{class_base_application_a765e0df01c141a16df3178ab4f17afe6}} 
+\index{Base\+Application@{Base\+Application}!m\+Resources\+Cfg@{m\+Resources\+Cfg}}
+\index{m\+Resources\+Cfg@{m\+Resources\+Cfg}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Resources\+Cfg}{mResourcesCfg}}
+{\footnotesize\ttfamily Ogre\+::\+String Base\+Application\+::m\+Resources\+Cfg\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by go(), and setup\+Resources().
+
+\mbox{\Hypertarget{class_base_application_add84ba707dc6c57e6283f214b1274110}\label{class_base_application_add84ba707dc6c57e6283f214b1274110}} 
+\index{Base\+Application@{Base\+Application}!m\+Root@{m\+Root}}
+\index{m\+Root@{m\+Root}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Root}{mRoot}}
+{\footnotesize\ttfamily Ogre\+::\+Root$\ast$ Base\+Application\+::m\+Root\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by choose\+Scene\+Manager(), configure(), create\+Frame\+Listener(), go(), setup(), and $\sim$\+Base\+Application().
+
+\mbox{\Hypertarget{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}\label{class_base_application_a8a7684f4f9a57ed3089048ad1a913b2d}} 
+\index{Base\+Application@{Base\+Application}!m\+Scene\+Mgr@{m\+Scene\+Mgr}}
+\index{m\+Scene\+Mgr@{m\+Scene\+Mgr}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Scene\+Mgr}{mSceneMgr}}
+{\footnotesize\ttfamily Ogre\+::\+Scene\+Manager$\ast$ Base\+Application\+::m\+Scene\+Mgr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by choose\+Scene\+Manager(), and create\+Camera().
+
+\mbox{\Hypertarget{class_base_application_a755f26d3a9915aaf830750d877e39d86}\label{class_base_application_a755f26d3a9915aaf830750d877e39d86}} 
+\index{Base\+Application@{Base\+Application}!m\+Shut\+Down@{m\+Shut\+Down}}
+\index{m\+Shut\+Down@{m\+Shut\+Down}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Shut\+Down}{mShutDown}}
+{\footnotesize\ttfamily bool Base\+Application\+::m\+Shut\+Down\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by frame\+Rendering\+Queued(), and key\+Pressed().
+
+\mbox{\Hypertarget{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}\label{class_base_application_a7faa397f4f4861ee8c361a01e90b4416}} 
+\index{Base\+Application@{Base\+Application}!m\+Tray\+Mgr@{m\+Tray\+Mgr}}
+\index{m\+Tray\+Mgr@{m\+Tray\+Mgr}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Tray\+Mgr}{mTrayMgr}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Sdk\+Tray\+Manager$\ast$ Base\+Application\+::m\+Tray\+Mgr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by create\+Frame\+Listener(), frame\+Rendering\+Queued(), key\+Pressed(), mouse\+Moved(), mouse\+Pressed(), mouse\+Released(), and $\sim$\+Base\+Application().
+
+\mbox{\Hypertarget{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}\label{class_base_application_ac5d8e9c81e036897bc82f81eff8c570f}} 
+\index{Base\+Application@{Base\+Application}!m\+Window@{m\+Window}}
+\index{m\+Window@{m\+Window}!Base\+Application@{Base\+Application}}
+\subsubsection{\texorpdfstring{m\+Window}{mWindow}}
+{\footnotesize\ttfamily Ogre\+::\+Render\+Window$\ast$ Base\+Application\+::m\+Window\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by configure(), create\+Frame\+Listener(), create\+Viewports(), frame\+Rendering\+Queued(), key\+Pressed(), window\+Closed(), and $\sim$\+Base\+Application().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_base_application_8h}{Base\+Application.\+h}\item 
+\hyperlink{_base_application_8cpp}{Base\+Application.\+cpp}\end{DoxyCompactItemize}
